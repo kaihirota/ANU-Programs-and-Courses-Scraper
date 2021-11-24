@@ -1,4 +1,6 @@
 from collections import Counter
+from pprint import pprint
+from typing import Any, Dict
 
 import spacy
 
@@ -8,16 +10,55 @@ nlp = spacy.load("en_core_web_sm")
 ruler = nlp.add_pipe("entity_ruler", config={"validate": True}, before="ner")
 ruler.add_patterns(patterns)
 
+Expression = Dict[str, Any]
+
+def split_expression(sent, token, start: int, end: int) -> Expression:
+    return {
+        'description': str(sent[start:end]),
+        'operator': {
+            token.text.upper(): [
+                parse_requisite_from_sent(sent, start, token.i),
+                parse_requisite_from_sent(sent, token.i + 1, end)
+            ]
+        }
+    }
+
+
 def parse_requisite_from_sent(sent, start: int = 0, end=None):
-    classes = []
-    programs = []
     counter = Counter()
 
-    txt_substr = sent[start:end].text
-    txt_lemma = " ".join([token.lemma_ for token in sent[start:end]])
-    negation = "not" in txt_substr
-    has_verb = False
+    raw_txt = sent[start:end].text
+    lemma_txt = " ".join([token.lemma_ for token in sent[start:end]])
+    negation = "not" in raw_txt
     verb = None
+    classes = []
+    programs = []
+    semicolon = False
+
+    # prioritize semicolons first
+    # find and/or following a semicolon where there are named entity and verb on left and right sides
+    for idx in range(start, end):
+        token = sent[idx]
+
+        if token.ent_type_ == "CLASS":
+            classes += token.text,
+        if token.is_alpha and token.ent_type_ == "PROGRAM":
+            programs += token.text,
+        if token.pos_ == 'VERB':
+            verb = token
+        if token.text == ';':
+            semicolon = True
+
+        if token.lower_ in {"and", "or"} and semicolon and verb:
+            # different pair of named entity and verb on left and right of the sentence
+            right_ent = sent[token.i + 1:].ents
+            right_verb = [t for t in sent[token.i + 1:] if t.pos_ == 'VERB']
+            if len(programs) + len(classes) > 0 and right_ent and right_verb:
+                return split_expression(sent, token, start, end)
+
+    verb = None
+    classes = []
+    programs = []
 
     for idx in range(start, end):
         token = sent[idx]
@@ -27,24 +68,48 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
         elif token.ent_type_ == "PROGRAM":
             programs += token.text,
         elif token.pos_ == 'VERB':
-            has_verb = True
             verb = token
-
-        # look for and / or compound boolean logic (i.e. not interested in "COMPxxxx or COMPyyyy")
-        # intersted in "completed COMPxxxx; and be enrolled in XXXX"
+        # translate into boolean expressions
         elif token.lower_ in {"and", "or"}:
             counter[token.lower_] += 1
 
             try:
+                # preceded or followed by a punctuation, unless that punctuation is part of a named entity
                 left_token = sent[token.i-1]
                 right_token = sent[token.i+1]
+                if (left_token.is_punct and not left_token.ent_type_) or (right_token.is_punct and not right_token.ent_type_):
+                    return split_expression(sent, token, start, end)
 
-                if left_token.is_punct or right_token.is_punct:
+                # different pair of named entity and verb on left and right of the sentence
+                right_ent = sent[token.i+1:].ents
+                right_verb = [t for t in sent[token.i+1:] if t.pos_ == 'VERB']
+                if verb and (len(programs) + len(classes) > 0) and right_ent and right_verb:
+                    return split_expression(sent, token, start, end)
+
+                # if no named entity to the left, mirror the verb
+                # i.e. "you must have completed or be currently enrolled in COMP6710"
+                # will be OR of two expressions on COMP6710, completed OR enrolled
+                if verb and (len(programs) + len(classes) == 0):
+                    right_counter = Counter()
+                    for t in sent[token.i+1:]:
+                        if t.lower_ in {"and", "or"}:
+                            right_counter[t.lower_] += 1
+                    try:
+                        right_operator, _ = right_counter.most_common(1)[0]
+                    except IndexError:
+                        right_operator = ""
                     return {
-                        'description': str(token.sent[start:end]),
+                        'description': str(sent[start:end]),
                         'operator': {
                             token.text.upper(): [
-                                parse_requisite_from_sent(sent, start, token.i),
+                                {
+                                    "condition": verb.text,
+                                    "operator": right_operator,
+                                    # "negation": negation,
+                                    "programs": [ent.text for ent in sent[token.i+1:].ents if ent.label_ == 'PROGRAM'],
+                                    "classes": [ent.text for ent in sent[token.i+1:].ents if ent.label_ == 'CLASS'],
+                                    "description": raw_txt
+                                },
                                 parse_requisite_from_sent(sent, token.i + 1, end)
                             ]
                         }
@@ -52,42 +117,27 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
             except IndexError:
                 pass
 
-    most_common = counter.most_common(1)
-    if len(most_common) > 0:
-        operator, _ = most_common[0]
-    else:
+    try:
+        operator, _ = counter.most_common(1)[0]
+    except IndexError:
         operator = ""
 
-    # detect co-requisite
-    simple_words = [token.lemma_ for token in sent[start:end] if token.pos_ != 'ADV']
-    if len(simple_words) >= 3:
-        for i in range(len(simple_words)-3):
-            s = set(simple_words[i:i+3])
-            if 'completed' in s and ('enrolled' in s or 'studying' in s):
-                return {
-                    "condition": "co-requisite",
-                    # "negation": negation,
-                    "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
-                    "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],
-                    "description": txt_substr
-                }
-
-    if 'incompatible' in txt_lemma:
+    if 'incompatible' in lemma_txt:
         return {
             "condition": "incompatible",
             # "negation": negation,
             "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
             "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],
-            "description": txt_substr
+            "description": raw_txt
         }
-    elif has_verb:
+    elif verb:
         return {
             "condition": verb.text,
             "operator": operator,
             "negation": negation,
             "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
             "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],
-            "description": txt_substr
+            "description": raw_txt
         }
     else:
         for i in range(start, -1, -1):
@@ -97,14 +147,14 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
                     "operator": operator,
                     "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
                     "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],
-                    "description": txt_substr
+                    "description": raw_txt
                 }
-        return {
-            "condition": "Unknown",
-            "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
-            "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],
-            "description": txt_substr
-        }
+    return {
+        "condition": "Unknown",
+        "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
+        "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],
+        "description": raw_txt
+    }
 
 
 def parse_requisites(doc):
@@ -112,3 +162,10 @@ def parse_requisites(doc):
     for sent in doc.sents:
         reqs += parse_requisite_from_sent(sent, 0, len(sent)),
     return reqs
+
+
+def main():
+    pprint(parse_requisites(nlp("To enrol in this course you must have either: completed COMP6250 (Professional Practice 1) and be enrolled in the Master of Computing; OR be enrolled in the Master of Computing (Advanced).")))
+
+if __name__=="__main__":
+    main()

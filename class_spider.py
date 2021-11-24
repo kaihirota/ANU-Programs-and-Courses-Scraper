@@ -61,7 +61,7 @@ class ClassSpider(CrawlSpider):
             requisites_txt = requisites_txt.replace('\n', ' ').replace('\\', '').strip()
         except Exception as e:
             self.logger.warn(f"{response.url}\n{course}\n{response.css('div.requisite').get()}")
-            self.logger.error(e)
+            # self.logger.error(e)
             return
 
         doc = nlp(requisites_txt)

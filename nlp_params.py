@@ -11,10 +11,7 @@ patterns = [
         "pattern": [
             {"LOWER": {"IN": ["master", "masters"]}},
             {"LOWER": "of"},
-            {"IS_TITLE": True},  # Computing, Engineering,
-            {"OP": "*", "IS_TITLE": True},
-            {"OP": "*", "TEXT": {"IN": ["in", "and", "of"]}},
-            {"OP": "*", "IS_TITLE": True},
+            {"OP": "+", "IS_TITLE": True},
             {"OP": "?", "TEXT": "("},
             {"OP": "?", "LOWER": {"IN": ["research", "advanced"]}},
             {"OP": "?", "TEXT": ")"}
@@ -26,12 +23,9 @@ patterns = [
         "pattern": [
             {"LOWER": {"IN": ["master", "masters"]}},
             {"LOWER": "of"},
-            {"IS_TITLE": True},  # Computing, Engineering,
-            {"OP": "*", "TEXT": {"IN": ["in", "and", "of"]}},
-            {"OP": "*", "IS_TITLE": True},
-            {"OP": "?", "TEXT": "("},
-            {"OP": "?", "LOWER": {"IN": ["research", "advanced"]}},
-            {"OP": "?", "TEXT": ")"}
+            {"OP": "+", "IS_TITLE": True},
+            {"OP": "?", "TEXT": {"IN": ["in", "and", "of"]}},
+            {"OP": "+", "IS_TITLE": True}
         ],
         "id": "program"
     }
