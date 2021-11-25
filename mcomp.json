@@ -1,0 +1,111 @@
+{
+  "id": "7706XMCOMP",
+  "name": "Master of Computing",
+  "requirements": [
+    {
+      "n_units": 24,
+      "items": [
+        {
+          "n_units": 6,
+          "id": "COMP6710",
+          "name": "Structured Programming"
+        },
+        {
+          "n_units": 6,
+          "id": "COMP6250",
+          "name": "Professional Practice 1"
+        },
+        {
+          "n_units": 6,
+          "id": "COMP6442",
+          "name": "Software Construction"
+        },
+        {
+          "n_units": 6,
+          "id": "COMP8260",
+          "name": "Professional Practice 2"
+        }
+      ],
+      "description": "24 units from completion of the following compulsory courses:"
+    },
+    {
+      "n_units": 6,
+      "items": [
+        {
+          "n_units": 6,
+          "id": "MATH6005",
+          "name": "Discrete Mathematics Models"
+        },
+        {
+          "n_units": 6,
+          "id": "COMP6260",
+          "name": "Foundations of Computing"
+        }
+      ],
+      "description": "6 units from one of the following foundational courses:"
+    },
+    {
+      "n_units": 12,
+      "items": [
+        {
+          "n_units": 6,
+          "id": "COMP8715",
+          "name": "Computing Project"
+        },
+        {
+          "n_units": 6,
+          "id": "COMP8755",
+          "name": "Individual Computing Project"
+        },
+        {
+          "n_units": 6,
+          "id": "COMP8830",
+          "name": "Computing Internship"
+        }
+      ],
+      "description": "12 units from one of the following project courses:"
+    },
+    {
+      "n_units": 24,
+      "items": [
+        {
+          "name": "Artificial Intelligence",
+          "path": "/specialisation/ARTIF-SPEC"
+        },
+        {
+          "name": "Computational Foundations",
+          "path": "/specialisation/COMP-SPEC"
+        },
+        {
+          "name": "Computer Systems",
+          "path": "/specialisation/CMSY-SPEC"
+        },
+        {
+          "name": "Data Science",
+          "path": "/specialisation/DTSC-SPEC"
+        },
+        {
+          "name": "Human Centred Design and Software Development",
+          "path": "/specialisation/HCSD-SPEC"
+        },
+        {
+          "name": "Information and Human Centred Computing",
+          "path": "/specialisation/IHCC-SPEC"
+        },
+        {
+          "name": "Machine Learning",
+          "path": "/specialisation/MCHL-SPEC"
+        },
+        {
+          "name": "Professional Computing",
+          "path": "/specialisation/PCOM-SPEC"
+        },
+        {
+          "name": "Software Engineering",
+          "path": "/specialisation/SENG-SPEC"
+        }
+      ],
+      "description": "24 units from the completion of one of the following Specialisations:"
+    }
+  ]
+}

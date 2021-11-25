@@ -45,3 +45,18 @@ be enrolled in the Master of Computing (Advanced)."
 - find a project/supervisor; and 
 - have an approved 'Independent Study Contract' Incompatible with COMP8715 and COMP8830."
 ```
+
+## Data clean up
+```
+# get frequency of conditions
+grep "condition" classes.json | awk -F" " '{print $2}' | sort | uniq -c | sort -nr
+```
+output
+
+      56 "completed",
+      38 "incompatible",
+      36 "studying",
+      18 "enrolled",
+      14 "Unknown",
+      5 "permission",
+      1 "obtained",

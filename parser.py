@@ -4,7 +4,7 @@ from typing import Any, Dict
 
 import spacy
 
-from nlp_params import patterns
+from nlp_params import patterns, CONDITION_MAPPING
 
 nlp = spacy.load("en_core_web_sm")
 ruler = nlp.add_pipe("entity_ruler", config={"validate": True}, before="ner")
@@ -132,7 +132,7 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
         }
     elif verb:
         return {
-            "condition": verb.text,
+            "condition": CONDITION_MAPPING[verb.text],
             "operator": operator,
             "negation": negation,
             "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
@@ -143,7 +143,7 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
         for i in range(start, -1, -1):
             if sent[i].pos_ == 'VERB':
                 return {
-                    "condition": sent[i].text,
+                    "condition": CONDITION_MAPPING[sent[i].text],
                     "operator": operator,
                     "programs": [ent.text for ent in sent[start:end].ents if ent.label_ == 'PROGRAM'],
                     "classes": [ent.text for ent in sent[start:end].ents if ent.label_ == 'CLASS'],

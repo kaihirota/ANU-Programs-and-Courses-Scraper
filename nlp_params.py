@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 TARGET = {"CLASS", "PROGRAM"}
 
 patterns = [
@@ -30,3 +32,11 @@ patterns = [
         "id": "program"
     }
 ]
+
+CONDITION_MAPPING = defaultdict(lambda : "Unknown")
+CONDITION_MAPPING["incompatible"] = "incompatible"
+CONDITION_MAPPING["completed"] = "completed"
+CONDITION_MAPPING["studying"] = "studying"
+CONDITION_MAPPING["enrolled"] = "enrolled"
+CONDITION_MAPPING["enrol"] = "permission"
+CONDITION_MAPPING["request"] = "permission"

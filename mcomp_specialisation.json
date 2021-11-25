@@ -1,0 +1,486 @@
+[
+  {
+    "id": "SENG-SPEC",
+    "name": "Software Engineering",
+    "requirements": [
+      {
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6353",
+            "name": "Systems Engineering for Software Engineers"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8100",
+            "name": "Requirements Elicitation and Analysis Techniques"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8110",
+            "name": "Managing Software Projects in a System Context"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8173",
+            "name": "Software Engineering Processes"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8180",
+            "name": "Systems and Software Safety"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8190",
+            "name": "Model-Driven Software Development"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8440",
+            "name": "Free and Open Source Software Development"
+          },
+          {
+            "n_units": 6,
+            "id": "VCPG6001",
+            "name": "Unravelling Complexity"
+          }
+        ],
+        "n_units": 24,
+        "description": "This specialisation requires the completion of 24 units, which must consistof:"
+      }
+    ]
+  },
+  {
+    "id": "ARTIF-SPEC",
+    "name": "Artificial Intelligence",
+    "requirements": [
+      {
+        "n_units": 24,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6262",
+            "name": "Logic"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6320",
+            "name": "Artificial Intelligence"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8620",
+            "name": "Advanced Topics in Artificial Intelligence"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8691",
+            "name": "Optimisation"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8670",
+            "name": "Advanced Logic and Computation"
+          }
+        ],
+        "description": "This Specialization requires the completion of 24 units from the followinglist:"
+      }
+    ]
+  },
+  {
+    "id": "PCOM-SPEC",
+    "name": "Professional Computing",
+    "requirements": [
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6120",
+            "name": "Software Engineering"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8110",
+            "name": "Managing Software Projects in a System Context"
+          }
+        ],
+        "description": "12 units from completion of the following software engineering course(s):"
+      },
+      {
+        "n_units": 6,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6240",
+            "name": "Relational Databases"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6420",
+            "name": "Introduction to Data Management, Analysis and Security"
+          }
+        ],
+        "description": "6 units from completion of the following database course(s):"
+      },
+      {
+        "n_units": 6,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6331",
+            "name": "Computer Networks"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6340",
+            "name": "Networked Information Systems"
+          }
+        ],
+        "description": "6 units from completion of the following networks course(s):"
+      }
+    ]
+  },
+  {
+    "id": "COMP-SPEC",
+    "name": "Computational Foundations",
+    "requirements": [
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6261",
+            "name": "Information Theory"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6262",
+            "name": "Logic"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6466",
+            "name": "Algorithms"
+          }
+        ],
+        "description": "A maximum of 12 units from completion of courses from the following list:"
+      },
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6361",
+            "name": "Principles of Programming Languages"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6363",
+            "name": "Theory of Computation"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8460",
+            "name": "Advanced Algorithms"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8670",
+            "name": "Advanced Topics in Logic and Computation"
+          },
+          {
+            "n_units": 6,
+            "id": "MATH6114",
+            "name": "Number Theory and Cryptography"
+          },
+          {
+            "n_units": 6,
+            "id": "MATH6203",
+            "name": "Foundations of Mathematics"
+          }
+        ],
+        "description": "A minimum of 12 units from completion of courses from the following list:"
+      }
+    ]
+  },
+  {
+    "id": "DTSC-SPEC",
+    "name": "Data Science",
+    "requirements": [
+      {
+        "n_units": 18,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP8410",
+            "name": "Data Mining"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8430",
+            "name": "Data Wrangling"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6490",
+            "name": "Document Analysis"
+          }
+        ],
+        "description": "18 units from completion of the following compulsory courses:"
+      },
+      {
+        "n_units": 6,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6320",
+            "name": "Artificial Intelligence"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8420",
+            "name": "Bio Inspired Computing: Applications and Interfaces"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8600",
+            "name": "Introduction to Statistical Machine Learning"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8620",
+            "name": "Advanced Topics in Artificial Intelligence"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8650",
+            "name": "Advanced Topics in Statistical Machine Learning"
+          }
+        ],
+        "description": "6 units from completion of courses from the following list:"
+      }
+    ]
+  },
+  {
+    "id": "IHCC-SPEC",
+    "name": "Information and Human Centred Computing",
+    "requirements": [
+      {
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6365",
+            "name": "System Architecture and Brain"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6390",
+            "name": "Human-Computer Interaction"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6461",
+            "name": "Computer Graphics"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6490",
+            "name": "Document Analysis"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8400",
+            "name": ": Algorithms for Data Mining"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8420",
+            "name": "Neural Networks, Deep Learning and Bio-inspired Computing"
+          },
+          {
+            "n_units": 6,
+            "id": "MATH6100",
+            "name": "Bioinformatics and Biological Modelling"
+          }
+        ],
+        "n_units": 24,
+        "description": "This specialisation requires the completion of 24 units, which must consistof:"
+      }
+    ]
+  },
+  {
+    "id": "CMSY-SPEC",
+    "name": "Computer Systems",
+    "requirements": [
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6310",
+            "name": "Systems Networks and Concurrency"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6331",
+            "name": "Computer Networks"
+          },
+          {
+            "n_units": 6,
+            "id": "ENGN6213",
+            "name": "Digital Systems and Microprocessors"
+          }
+        ],
+        "description": "A maximum of 12 units from completion of courses from the following list:"
+      },
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6330",
+            "name": "Operating Systems"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6361",
+            "name": "Principles of Programming Languages"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6464",
+            "name": "High Performance Scientific Computing"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8300",
+            "name": "Parallel Systems"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8330",
+            "name": "Real-Time Embedded Systems"
+          }
+        ],
+        "description": "A minimum of 12 units from completion of courses from the following list:"
+      }
+    ]
+  },
+  {
+    "id": "MCHL-SPEC",
+    "name": "Machine Learning",
+    "requirements": [
+      {
+        "n_units": 24,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6261",
+            "name": "Information Theory"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6490",
+            "name": "Document Analysis"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6670",
+            "name": "Introduction to Machine Learning"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8420",
+            "name": "Neural Networks, Deep Learning and Bio-inspired Computing"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8600",
+            "name": "Statistical Machine Learning"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8650",
+            "name": "Advanced Topics in Machine Learning"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8880",
+            "name": "Computational Methods for Network Science"
+          },
+          {
+            "n_units": 6,
+            "id": "ENGN6528",
+            "name": "Computer Visions"
+          }
+        ],
+        "description": "This Specialization requires the completion of 24 units from the followinglist:"
+      }
+    ]
+  },
+  {
+    "id": "HCSD-SPEC",
+    "name": "Human Centred Design and Software Development",
+    "requirements": [
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6353",
+            "name": "Systems Engineering for Software Engineers"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP6461",
+            "name": "Computer Graphics"
+          },
+          {
+            "n_units": 6,
+            "id": "VCPG6001",
+            "name": "Unraveling Complexity"
+          }
+        ],
+        "description": "A maximum of 12 units from completion of courses from the following list:"
+      },
+      {
+        "n_units": 12,
+        "items": [
+          {
+            "n_units": 6,
+            "id": "COMP6390",
+            "name": "HCI and Usability Engineering"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8100",
+            "name": "Requirements Elicitation and Analysis Techniques"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8173",
+            "name": "Software Engineering Processes"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8180",
+            "name": "Systems and Software Safety"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8190",
+            "name": "Model-Driven Software Development"
+          },
+          {
+            "n_units": 6,
+            "id": "COMP8420",
+            "name": "Neural Networks, Deep Learning and Bio-inspired Computing"
+          }
+        ],
+        "description": "A minimum of 12 units from completion of courses from the following list:"
+      }
+    ]
+  }
+]

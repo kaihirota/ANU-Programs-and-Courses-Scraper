@@ -1,0 +1,842 @@
+{
+  "TotalCount": 93,
+  "Items": [
+    {
+      "CourseCode": "COMP8460",
+      "Name": "Advanced Algorithms",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6445",
+      "Name": "Advanced Computing Research Methods",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8224",
+      "Name": "Advanced Control Systems",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8620",
+      "Name": "Advanced Topics in Artificial intelligence",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8637",
+      "Name": "Advanced Topics in Communications and Signal Processing",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8501",
+      "Name": "Advanced Topics in Computer Vision",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8650",
+      "Name": "Advanced Topics in Machine Learning",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8536",
+      "Name": "Advanced Topics in Mechatronics Systems",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6466",
+      "Name": "Algorithms",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6720",
+      "Name": "Art and Interaction in New Media",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6320",
+      "Name": "Artificial Intelligence",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6511",
+      "Name": "Composite Materials",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6719",
+      "Name": "Computer Architecture and Simulation",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6461",
+      "Name": "Computer Graphics",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6331",
+      "Name": "Computer Networks",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6331",
+      "Name": "Computer Networks",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6331",
+      "Name": "Computer Networks",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6300",
+      "Name": "Computer Organisation and Program Execution",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6528",
+      "Name": "Computer Vision",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8830",
+      "Name": "Computing Internship",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 12.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8715",
+      "Name": "Computing Project",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8800",
+      "Name": "Computing Research Project",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 12.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6223",
+      "Name": "Control Systems",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "CECS6002",
+      "Name": "Cybernetics Practice for Cyber-Physical Systems",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8410",
+      "Name": "Data Mining",
+      "Session": "First Semester/Winter Session/Spring Session",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8430",
+      "Name": "Data Wrangling",
+      "Session": "Summer Session/Second Semester/Spring Session",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6626",
+      "Name": "Digital Communications",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6537",
+      "Name": "Digital Signal Processing",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6213",
+      "Name": "Digital Systems and Microprocessors",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6490",
+      "Name": "Document Analysis",
+      "Session": "Autumn Session/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8537",
+      "Name": "Embedded Systems and Real Time Digital Signal Processing",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6516",
+      "Name": "Energy Resources and Renewable Technologies",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8535",
+      "Name": "Engineering Data Analytics",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6200",
+      "Name": "Engineering Internship",
+      "Session": "Summer Session/First Semester/Autumn Session/Winter Session/Second Semester/Spring Session",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6601",
+      "Name": "Engineering Materials",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6410",
+      "Name": "Engineering Sustainable Systems",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8820",
+      "Name": "Exchange Program for Graduate Students in Computer Science",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6615",
+      "Name": "Finite Element Analysis",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6224",
+      "Name": "Fluid Mechanics and Heat Transfer",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6260",
+      "Name": "Foundations of Computing",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "CECS6001",
+      "Name": "Fundamentals of a New Applied Science I",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 12.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8625",
+      "Name": "Future Energy Grids: Integrating Battery Storage, Electric Vehicles & Solar Energy",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8170",
+      "Name": "Group Project",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 12.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6390",
+      "Name": "HCI and Usability Engineering",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6464",
+      "Name": "High Performance Scientific Computing",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8755",
+      "Name": "Individual Computing Project",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8833",
+      "Name": "Industrial Energy Efficiency and Decarbonisation",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8534",
+      "Name": "Information Theory",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8831",
+      "Name": "Integration of Renewable Energy into Power Systems and Microgrids",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6420",
+      "Name": "Introduction to Data Management, Analysis and Security",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6670",
+      "Name": "Introduction to Machine Learning",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8100",
+      "Name": "Introduction to Systems Engineering",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6262",
+      "Name": "Logic",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6262",
+      "Name": "Logic",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8110",
+      "Name": "Managing Software Projects in a System Context",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6340",
+      "Name": "Networked Information Systems",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8420",
+      "Name": "Neural Networks, Deep Learning and Bio-inspired Computing",
+      "Session": "First Semester/Autumn Session",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "CECS8001",
+      "Name": "New Applied Science: Lab",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 12.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6330",
+      "Name": "Operating Systems Implementation",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6512",
+      "Name": "Optical Physics",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6512",
+      "Name": "Optical Physics",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6512",
+      "Name": "Optical Physics",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8691",
+      "Name": "Optimisation",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8300",
+      "Name": "Parallel Systems",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8830",
+      "Name": "Photovoltaic Power Plants",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6524",
+      "Name": "Photovoltaic Technologies",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6625",
+      "Name": "Power Systems and Power Electronics",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8538",
+      "Name": "Probability and Stochastic Processes in Engineering",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6250",
+      "Name": "Professional Practice 1",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6250",
+      "Name": "Professional Practice 1",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8260",
+      "Name": "Professional Practice 2",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8260",
+      "Name": "Professional Practice 2",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6730",
+      "Name": "Programming for Scientists",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "CECS8002",
+      "Name": "Projects in Applied Cybernetics",
+      "Session": "Summer Session/First Semester/Autumn Session/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6240",
+      "Name": "Relational Databases",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8601",
+      "Name": "Research Project",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8602",
+      "Name": "Research Project",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6627",
+      "Name": "Robotics",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6442",
+      "Name": "Software Construction",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6120",
+      "Name": "Software Engineering",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6525",
+      "Name": "Solar Thermal Technologies",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6521",
+      "Name": "Special Topics In  Engineering II",
+      "Session": "First Semester/Winter Session/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6470",
+      "Name": "Special Topics in Computing",
+      "Session": "First Semester/Second Semester/Spring Session",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6520",
+      "Name": "Special Topics in Engineering I",
+      "Session": "First Semester/Winter Session/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP8600",
+      "Name": "Statistical Machine Learning",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6710",
+      "Name": "Structured Programming",
+      "Session": "First Semester/Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6331",
+      "Name": "Systems Dynamics",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8120",
+      "Name": "Systems Modelling",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6310",
+      "Name": "Systems, Networks and Concurrency",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6363",
+      "Name": "Theory of Computation",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN8832",
+      "Name": "Urban Energy and Energy Efficiency",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "COMP6780",
+      "Name": "Web Development and Design",
+      "Session": "First Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    },
+    {
+      "CourseCode": "ENGN6536",
+      "Name": "Wireless Communications",
+      "Session": "Second Semester",
+      "Career": "Postgraduate",
+      "Units": 6.0,
+      "ModeOfDelivery": "In Person",
+      "Year": 2020
+    }
+  ]
+}
