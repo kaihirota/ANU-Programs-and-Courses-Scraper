@@ -46,7 +46,6 @@ be enrolled in the Master of Computing (Advanced)."
 - have an approved 'Independent Study Contract' Incompatible with COMP8715 and COMP8830."
 ```
 
-## Data clean up
 ```
 # get frequency of conditions
 grep "condition" classes.json | awk -F" " '{print $2}' | sort | uniq -c | sort -nr
