@@ -7,34 +7,35 @@ from scrapy.spiders import CrawlSpider, Rule
 
 from nlp_params import TARGET
 from models import Course
-from parser import parse_requisites, nlp
+from class_parser import parse_requisites, nlp
 
 
 class ClassSpider(CrawlSpider):
-    name = 'ClassSpider'
-    year = '2022'
     domain = 'programsandcourses.anu.edu.au'
-    allowed_domains = {domain}
     converter = html2text.HTML2Text()
     converter.ignore_links = True
 
+    name = 'ClassSpider'
+    year = '2022'
+    data_file = f'cecs_classes_{year}.json'
+
     rules = (
         Rule(LinkExtractor(allow=(r'/program/\w+',),
-                           allow_domains=allowed_domains), ),
+                           allow_domains={domain}), ),
         Rule(LinkExtractor(allow=(r'/specialisation/\w+-SPEC',),
-                           allow_domains=allowed_domains), ),
+                           allow_domains={domain}), ),
         Rule(LinkExtractor(allow=(r'/([0-9]{4}/)?course/\w+',),
-                           allow_domains=allowed_domains),
+                           allow_domains={domain}),
              callback='parse_class')
     )
 
     def start_requests(self):
-        with open(f'cecs_classes_{self.year}.json') as f:
+        with open(self.data_file) as f:
             data = json.load(f)
-            classes = data['Items']
-            class_codes = [c['CourseCode'] for c in classes]
-            start_urls = [f'https://{self.domain}/course/{code}' for code in class_codes]
-            for url in start_urls:
+            items = data['Items']
+
+            for item in items:
+                url = f"https://{self.domain}/course/{item['CourseCode']}"
                 yield scrapy.Request(url, self.parse_class)
 
     def parse_class(self, response) -> Course:

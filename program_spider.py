@@ -1,3 +1,4 @@
+import json
 from collections import deque
 from typing import List
 
@@ -11,44 +12,45 @@ from models import Course, Requirement, Program, Specialization
 
 
 class ProgramSpider(CrawlSpider):
-    name = 'ProgramSpider'
-    programs = {
-        'MCOMP': '7706XMCOMP',
-        'MMLCV': 'MMLCV'
-    }
-    start_urls = [f'https://programsandcourses.anu.edu.au/program/{pid}' for pid in programs.values()]
-    DOMAIN = 'programsandcourses.anu.edu.au'
-    allowed_domains = [DOMAIN]
+    domain = 'programsandcourses.anu.edu.au'
     converter = html2text.HTML2Text()
     converter.ignore_links = True
+
+    name = 'ProgramSpider'
+    data_files = ['data/programs_undergrad.json', 'data/programs_postgrad.json']
 
     rules = (
         Rule(
             LinkExtractor(
                 allow=(r'/program/\w+',),
-                allow_domains=allowed_domains
+                allow_domains={domain}
             ),
             callback='parse_program'
         ),
         Rule(
             LinkExtractor(
                 allow=(r'/specialisation/\w+-SPEC',),
-                allow_domains=allowed_domains
+                allow_domains={domain}
             ),
             callback='parse_specialization'
         ),
         Rule(
             LinkExtractor(
                 allow=(r'/([0-9]{4}/)?course/\w+',),
-                allow_domains=allowed_domains
+                allow_domains={domain}
             ),
             callback='parse_class'
         )
     )
 
     def start_requests(self):
-        for url in self.start_urls:
-            yield scrapy.Request(url, self.parse_program)
+        with open(self.data_file) as f:
+            data = json.load(f)
+            items = data['Items']
+
+            for item in items:
+                url = f"https://{self.domain}/course/{item['AcademicPlanCode']}"
+                yield scrapy.Request(url, self.parse_class)
 
     def parse_program(self, response):
         self.logger.info(response.url)
@@ -64,7 +66,7 @@ class ProgramSpider(CrawlSpider):
         yield p
 
         for spec in response.xpath("//div[@class='body__inner__columns']/div/ul/li/a"):
-            yield scrapy.Request(f"https://{self.DOMAIN}{spec.attrib['href']}", self.parse_specialization)
+            yield scrapy.Request(f"https://{self.domain}{spec.attrib['href']}", self.parse_specialization)
 
     def parse_requirements(self, response) -> List[Requirement]:
         queue = deque(response.xpath("//div[contains(@id, 'study')]/div/p"))
