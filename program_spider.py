@@ -2,71 +2,41 @@ import json
 from collections import deque
 from typing import List
 
-import html2text as html2text
 import scrapy
 from scrapy import Selector
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
 
+from anu_spider import ANUSpider
 from models import Course, Requirement, Program, Specialization
 
 
-class ProgramSpider(CrawlSpider):
-    domain = 'programsandcourses.anu.edu.au'
-    converter = html2text.HTML2Text()
-    converter.ignore_links = True
-
+class ProgramSpider(ANUSpider):
     name = 'ProgramSpider'
+    id_attribute_name = 'AcademicPlanCode'
     data_files = ['data/programs_undergrad.json', 'data/programs_postgrad.json']
 
-    rules = (
-        Rule(
-            LinkExtractor(
-                allow=(r'/program/\w+',),
-                allow_domains={domain}
-            ),
-            callback='parse_program'
-        ),
-        Rule(
-            LinkExtractor(
-                allow=(r'/specialisation/\w+-SPEC',),
-                allow_domains={domain}
-            ),
-            callback='parse_specialization'
-        ),
-        Rule(
-            LinkExtractor(
-                allow=(r'/([0-9]{4}/)?course/\w+',),
-                allow_domains={domain}
-            ),
-            callback='parse_class'
-        )
-    )
-
     def start_requests(self):
-        with open(self.data_file) as f:
-            data = json.load(f)
-            items = data['Items']
+        for file_path in self.data_files:
+            with open(file_path) as f:
+                data = json.load(f)
+                items = data['Items']
 
-            for item in items:
-                url = f"https://{self.domain}/course/{item['AcademicPlanCode']}"
-                yield scrapy.Request(url, self.parse_class)
+                for item in items[:5]:
+                    url = f"https://{self.DOMAIN}/program/{item[self.id_attribute_name]}"
+                    yield scrapy.Request(url, self.parse_program)
 
     def parse_program(self, response):
-        self.logger.info(response.url)
+        program_id = response.url.split('/')[-1]
+        program_name = response.css('span.intro__degree-title__component::text').get()
+        if program_name:
+            self.logger.info(response.url)
+            program_name = self.converter.handle(program_name).replace("\n", "")
 
-        program_id: str = response.url.split('/')[-1]
-        program_name = self.converter.handle(response.css('span.intro__degree-title__component').get())
-        requirements = self.parse_requirements(response)
-
-        p = Program()
-        p['id'] = program_id
-        p['name'] = program_name.replace("\n", "")
-        p['requirements'] = requirements
-        yield p
-
-        for spec in response.xpath("//div[@class='body__inner__columns']/div/ul/li/a"):
-            yield scrapy.Request(f"https://{self.domain}{spec.attrib['href']}", self.parse_specialization)
+            p = Program()
+            p['id'] = program_id
+            p['name'] = program_name
+            p['n_units'] = self.parse_unit(response)
+            p['requirements'] = self.parse_requirements(response)
+            yield p
 
     def parse_requirements(self, response) -> List[Requirement]:
         queue = deque(response.xpath("//div[contains(@id, 'study')]/div/p"))
@@ -81,20 +51,21 @@ class ProgramSpider(CrawlSpider):
                 for t in popped_item_tokens:
                     try:
                         units = int(t)
-                    except:
+                    except Exception:
                         pass
-                req = self.parse_specializations(response)
                 r = Requirement()
                 r['n_units'] = units
-                r['items'] = req
+                r['items'] = self.parse_specializations(response)
                 r['description'] = self.converter.handle(popped_item.get()).replace("\n", "")
                 requirements += r,
-            elif 'units' in popped_item_tokens and 'following' in popped_item_tokens and queue and not queue[0].get()[0].isnumeric():
+            elif 'units' in popped_item_tokens \
+                    and 'following' in popped_item_tokens \
+                    and queue and not queue[0].get()[0].isnumeric():
                 units = 0
                 for t in popped_item_tokens:
                     try:
                         units = int(t)
-                    except:
+                    except Exception:
                         pass
 
                 req = []
@@ -125,13 +96,6 @@ class ProgramSpider(CrawlSpider):
             specialisations += {"name": item.css('a::text').extract_first(), 'path': item.attrib['href']},
         return specialisations
 
-    def parse_specialization(self, response) -> Specialization:
-        s = Specialization()
-        s['id'] = response.url.split('/')[-1]
-        s['name'] = response.css('span.intro__degree-title__component::text')[0].get()
-        s['requirements'] = self.parse_specialization_requirements(response)
-        return s
-
     def parse_specialization_requirements(self, response) -> List[Requirement]:
         if len(response.xpath("//div[contains(@id, 'study')]/div/table")) > 0:
             reqs = []
@@ -150,7 +114,7 @@ class ProgramSpider(CrawlSpider):
             for t in tokens:
                 try:
                     units = int(t)
-                except:
+                except Exception:
                     pass
             r = Requirement()
             r['items'] = req
@@ -173,7 +137,7 @@ class ProgramSpider(CrawlSpider):
                     for t in popped_item_tokens:
                         try:
                             units = int(t)
-                        except:
+                        except Exception:
                             pass
 
                     req = []

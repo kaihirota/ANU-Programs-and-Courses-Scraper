@@ -1,59 +1,35 @@
 import json
 
-import html2text as html2text
 import scrapy
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
+from scrapy.http.response.html import HtmlResponse
 
-from nlp_params import TARGET
+from anu_spider import ANUSpider
+from class_parser import parse_requisites
 from models import Course
-from class_parser import parse_requisites, nlp
+from nlp_config import TARGET
 
 
-class ClassSpider(CrawlSpider):
-    domain = 'programsandcourses.anu.edu.au'
-    converter = html2text.HTML2Text()
-    converter.ignore_links = True
-
+class ClassSpider(ANUSpider):
     name = 'ClassSpider'
-    year = '2022'
-    data_file = f'cecs_classes_{year}.json'
-
-    rules = (
-        Rule(LinkExtractor(allow=(r'/program/\w+',),
-                           allow_domains={domain}), ),
-        Rule(LinkExtractor(allow=(r'/specialisation/\w+-SPEC',),
-                           allow_domains={domain}), ),
-        Rule(LinkExtractor(allow=(r'/([0-9]{4}/)?course/\w+',),
-                           allow_domains={domain}),
-             callback='parse_class')
-    )
+    id_attribute_name = 'CourseCode'
+    years = ['2020', '2021', '2022']
 
     def start_requests(self):
-        with open(self.data_file) as f:
-            data = json.load(f)
-            items = data['Items']
+        for year in self.years:
+            with open(f'data/cecs_classes_{year}.json') as f:
+                data = json.load(f)
+                items = data['Items']
 
-            for item in items:
-                url = f"https://{self.domain}/course/{item['CourseCode']}"
-                yield scrapy.Request(url, self.parse_class)
+                for item in items:
+                    url = f"https://{self.DOMAIN}/course/{item[self.id_attribute_name]}"
+                    yield scrapy.Request(url, self.parse_class)
 
-    def parse_class(self, response) -> Course:
+    def parse_class(self, response: HtmlResponse) -> Course:
         course = Course()
         course['id'] = response.url.split('/')[-1]
         course['name'] = response.css("span.intro__degree-title__component::text").get().strip()
         course['description'] = self.converter.handle(response.css("div.introduction").get()).strip().replace("\n", " ")
-
-        # get units
-        txt = " ".join([elem.get() for elem in response.css("li.degree-summary__requirements-units::text")])
-        doc = nlp(txt)
-
-        unit = 0
-        for token in doc:
-            if token.is_digit:
-                unit = int(token.text)
-
-        course['n_units'] = unit
+        course['n_units'] = self.parse_unit(response)
 
         # get requisites
         requisites_txt = response.css("div.requisite").get()
@@ -65,7 +41,7 @@ class ClassSpider(CrawlSpider):
             # self.logger.error(e)
             return
 
-        doc = nlp(requisites_txt)
+        doc = self.nlp(requisites_txt)
         course['requisites_raw'] = doc.text
         course['entities'] = [ent.text for ent in doc.ents if ent.label_ in TARGET]
 

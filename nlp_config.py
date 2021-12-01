@@ -1,8 +1,6 @@
 from collections import defaultdict
 
-TARGET = {"CLASS", "PROGRAM"}
-
-patterns = [
+PATTERNS = [
     {
         "label": "CLASS",
         "pattern": [{"TEXT": {"REGEX": "[A-Z]{4}[0-9]{4}"}}],
@@ -33,7 +31,9 @@ patterns = [
     }
 ]
 
-CONDITION_MAPPING = defaultdict(lambda : "Unknown")
+TARGET = {"CLASS", "PROGRAM"}
+
+CONDITION_MAPPING = defaultdict(lambda: "Unknown")
 CONDITION_MAPPING["incompatible"] = "incompatible"
 CONDITION_MAPPING["completed"] = "completed"
 CONDITION_MAPPING["studying"] = "studying"

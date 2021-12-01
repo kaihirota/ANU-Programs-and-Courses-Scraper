@@ -1,16 +1,10 @@
 from collections import Counter
-from pprint import pprint
 from typing import Any, Dict
 
-import spacy
-
-from nlp_params import patterns, CONDITION_MAPPING
-
-nlp = spacy.load("en_core_web_sm")
-ruler = nlp.add_pipe("entity_ruler", config={"validate": True}, before="ner")
-ruler.add_patterns(patterns)
+from nlp_config import CONDITION_MAPPING
 
 Expression = Dict[str, Any]
+
 
 def split_expression(sent, token, start: int, end: int) -> Expression:
     return {
@@ -75,14 +69,15 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
 
             try:
                 # preceded or followed by a punctuation, unless that punctuation is part of a named entity
-                left_token = sent[token.i-1]
-                right_token = sent[token.i+1]
-                if (left_token.is_punct and not left_token.ent_type_) or (right_token.is_punct and not right_token.ent_type_):
+                left_token = sent[token.i - 1]
+                right_token = sent[token.i + 1]
+                if (left_token.is_punct and not left_token.ent_type_) or (
+                        right_token.is_punct and not right_token.ent_type_):
                     return split_expression(sent, token, start, end)
 
                 # different pair of named entity and verb on left and right of the sentence
-                right_ent = sent[token.i+1:].ents
-                right_verb = [t for t in sent[token.i+1:] if t.pos_ == 'VERB']
+                right_ent = sent[token.i + 1:].ents
+                right_verb = [t for t in sent[token.i + 1:] if t.pos_ == 'VERB']
                 if verb and (len(programs) + len(classes) > 0) and right_ent and right_verb:
                     return split_expression(sent, token, start, end)
 
@@ -91,7 +86,7 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
                 # will be OR of two expressions on COMP6710, completed OR enrolled
                 if verb and (len(programs) + len(classes) == 0):
                     right_counter = Counter()
-                    for t in sent[token.i+1:]:
+                    for t in sent[token.i + 1:]:
                         if t.lower_ in {"and", "or"}:
                             right_counter[t.lower_] += 1
                     try:
@@ -106,8 +101,9 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
                                     "condition": verb.text,
                                     "operator": right_operator,
                                     # "negation": negation,
-                                    "programs": [ent.text for ent in sent[token.i+1:].ents if ent.label_ == 'PROGRAM'],
-                                    "classes": [ent.text for ent in sent[token.i+1:].ents if ent.label_ == 'CLASS'],
+                                    "programs": [ent.text for ent in sent[token.i + 1:].ents if
+                                                 ent.label_ == 'PROGRAM'],
+                                    "classes": [ent.text for ent in sent[token.i + 1:].ents if ent.label_ == 'CLASS'],
                                     "description": raw_txt
                                 },
                                 parse_requisite_from_sent(sent, token.i + 1, end)
@@ -162,10 +158,3 @@ def parse_requisites(doc):
     for sent in doc.sents:
         reqs += parse_requisite_from_sent(sent, 0, len(sent)),
     return reqs
-
-
-def main():
-    pprint(parse_requisites(nlp("To enrol in this course you must have either: completed COMP6250 (Professional Practice 1) and be enrolled in the Master of Computing; OR be enrolled in the Master of Computing (Advanced).")))
-
-if __name__=="__main__":
-    main()

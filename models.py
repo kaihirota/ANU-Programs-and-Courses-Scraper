@@ -24,6 +24,7 @@ class Program(Item):
     type: 'program'
     id: str = Field()
     name: str = Field()
+    n_units: int = Field()
     requirements: List[Requirement] = Field()
 
 
@@ -31,4 +32,5 @@ class Specialization(Item):
     type: 'specialization'
     id: str = Field()
     name: str = Field()
+    n_units: int = Field()
     requirements: List[Requirement] = Field()
