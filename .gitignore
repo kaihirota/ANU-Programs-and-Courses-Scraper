@@ -1,3 +1,6 @@
 #/data/
 /.ipynb_checkpoints/
 .idea
+custom_NER.ipynb
+scratch.ipynb
+data.json
