@@ -1,8 +1,12 @@
-[comment]: <> (# Changelog)
+# Changelog
+- First version of program_spider.py is done. Not perfect yet, but can parse most programs (Bachelor / Master / Etc) correctly as long as the formatting is similar.
 
 # About
 
 ## Stages
+
+### Tasks on hold:
+- [ ] add `CLASS_NAME` to NER pipeline?
 
 ### Stage 1: Build dataset
 
@@ -10,10 +14,8 @@
 - Scrape [ANU Programs and Courses](https://programsandcourses.anu.edu.au/) for additional data
   - Programs:
     - [x] parse degree requirements
-    - [ ] update NER logic to exclude `(6 units)` in course name
-    - [ ] add `CLASS_NAME` to NER pipeline?
+    - [x] update NER logic to exclude `(6 units)` in course name?
     - [ ] parse specializations/majors/minors (as part of requirements)
-    - [ ] fill in empty course names
     - fix:
       - Bachelor of Arts
       - Bachelor of Asian Studies
@@ -25,9 +27,9 @@
 
 ### Stage 2: Build Neo4j Graph Database; create and expose GraphQL endpoint
 - Apollo / Graphene
+- [ ] fill in empty course names (scraped by `program_spider`)
 
 ### Stage 3: WebApp
-
 
 # Challenges
 
