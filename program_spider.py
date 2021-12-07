@@ -13,6 +13,7 @@ from models import Requirement, Program, Course
 
 class ProgramSpider(ANUSpider):
     """This class is for scraping ANU programs - Master, Bachelor, Diploma, etc"""
+
     name = 'ProgramSpider'
     id_attribute_name = 'AcademicPlanCode'
     data_files = ['data/programs_undergrad.json', 'data/programs_postgrad.json']
@@ -25,9 +26,9 @@ class ProgramSpider(ANUSpider):
 
                 for item in items[:50]:
                     url = f"https://{self.DOMAIN}/program/{item[self.id_attribute_name]}"
-                    yield scrapy.Request(url, self.parse_program)
+                    yield scrapy.Request(url, self.parse)
 
-    def parse_program(self, response: HtmlResponse):
+    def parse(self, response: HtmlResponse, **kwargs):
         program_id = response.url.split('/')[-1]
         program_name = response.css('span.intro__degree-title__component::text').get()
         if program_name:
@@ -45,8 +46,11 @@ class ProgramSpider(ANUSpider):
         """
         parse the response and extract requirements as a list of string and indentation level
         """
-        html = response.xpath(
-            '//div[has-class("body", "transition")]/div[@id="study"]/div[has-class("body__inner", "w-doublewide", "copy")]').get()
+        html_path = '//div[has-class("body", "transition")]' \
+                    '/div[@id="study"]' \
+                    '/div[has-class("body__inner", "w-doublewide", "copy")]'
+
+        html = response.xpath(html_path).get()
         soup = BeautifulSoup(html, 'html.parser')
 
         elements = []
@@ -56,7 +60,7 @@ class ProgramSpider(ANUSpider):
         elems = elements[0].contents
         bs_elems = []
         for elem in elems:
-            if elem.text in {"Minors", "Study Options", "Specialisations"}:
+            if elem.text in {"Minors", "Study Options", "Specialisations", "Honours grade calculation"}:
                 break
 
             try:
@@ -69,7 +73,9 @@ class ProgramSpider(ANUSpider):
                 padding = 0
 
             if elem.name and elem.name == 'ul':
-                bs_elems += ([c.text for c in elem.children], padding),
+                padding = bs_elems[-1][1] + 1
+                for c in elem.children:
+                    bs_elems += (c.text, padding),
             elif elem.text.replace('\n', '').strip() != '':
                 bs_elems += (elem.text.replace('\n', ''), padding),
 
@@ -81,68 +87,63 @@ class ProgramSpider(ANUSpider):
             val_to_rank[val] = rank
             rank += 1
 
+        # convert padding / margin to rank and store in list
         ret = []
         for line, padding in bs_elems:
-            ret += [line, val_to_rank[padding]],
+            if line != 'Program Requirements':
+                line = line.replace('\u00a0', ' ').strip()
+                ret += [line, val_to_rank[padding]],
 
-        # if specializations list is in requirements (e.g. MCOMP)
-        for i in range(1, len(ret)):
-            if type(ret[i][0]) == list:
-                ret[i][1] = ret[i - 1][1] + 1
+        # fix inconsistent indentations
+        is_class = [0] * len(ret)
+        for i in range(len(ret)):
+            doc = self.nlp(ret[i][0])
+            is_class[i] = any([ent for ent in doc.ents if ent.label_ == 'CLASS'])
+
+        for i in range(len(ret) - 1):
+            if is_class[i] and is_class[i + 1] and ret[i][1] != ret[i + 1][1]:
+                ret[i + 1][1] = ret[i][1]
+
         return ret
 
-    def group_requirements(self, data: List[Tuple[Union[str, List[str]], int]], level=0) -> List[Requirement]:
-        """TODO
-        - classes inconsistent indent
-        - padding-left and margin-left, inconsistent indent
-        """
+    def group_requirements(
+            self,
+            data: List[Tuple[Union[str, List[str]], int]],
+            current_indent_level=0
+    ) -> List[Union[Course, Requirement]]:
         requirements = []
-        skipped = []
         while data:
             line, indent = data.pop()
+            doc = self.nlp(line)
+            classes = [ent.text for ent in doc.ents if ent.label_ == 'CLASS']
 
-            if line == 'Program Requirements':
-                continue
-            if indent != level:
-                skipped += (line, indent),
-                continue
+            # check if line is a description like "xx units from completion of classes from the following list"
+            m = re.search(r"\d+ unit[s]", line)
+            if m and m.group(0):  # TODO: and len(classes) == 0?
+                # collect classes for the requirement into a list and recurse
+                children = []
+                while data and data[-1][1] > indent:
+                    children += data.pop(),
 
-            if type(line) == list:
-                return line
-            elif type(line) == str:
-                line = line.replace('\u00a0', '')
-                doc = self.nlp(line)
-                classes = [ent.text for ent in doc.ents if ent.label_ == 'CLASS']
+                req = Requirement()
+                req['description'] = line
+                req['n_units'] = int(m.group(0).split()[0])
+                req['items'] = self.group_requirements(children[::-1], current_indent_level + 1)
 
-                # check if line is a description like "xx units from completion of classes from the following list"
-                m = re.search("\d+ unit[s]", line)
-                if m and m.group(0):
-                    # collect classes for the requirement into a list and recurse
-                    children = []
-                    while data and data[-1][1] > indent:
-                        children += data.pop(),
+                # sometimes there will be lines like "6 units from completion of COMPxxxx"
+                if req['n_units'] and classes and not req['items']:
+                    req['items'] = classes
+                elif not req['items']:
+                    del req['items']
 
-                    req = Requirement()
-                    req['description'] = line
-                    req['n_units'] = int(m.group(0).split()[0])
-                    req['items'] = self.group_requirements(children[::-1], level+1)
+                requirements += req,
+            elif classes and len(classes) == 1:
+                # assume a single line only contains one class
+                course = Course()
+                course['id'] = classes[0]
+                course['name'] = line.replace(classes[0], "").lstrip('- ').strip()
+                requirements += course,
 
-                    # sometimes there will be lines like "6 units from completion of COMPxxxx"
-                    if req['n_units'] and classes and not req['items']:
-                        req['items'] = classes
-                    elif not req['items']:
-                        del req['items']
-
-                    requirements += req,
-                elif classes and len(classes) == 1:
-                    # assume a single line only contains one class
-                    course = Course()
-                    course['id'] = classes[0]
-                    course['name'] = line.replace(classes[0], "").lstrip('- ').strip()
-                    requirements += course,
-
-        if skipped:
-            requirements.extend(self.group_requirements(skipped[::-1], level+1))
         return requirements
 
     def parse_requirements(self, response: HtmlResponse) -> List[Requirement]:
