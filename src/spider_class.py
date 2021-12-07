@@ -3,13 +3,15 @@ import json
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 
-from anu_spider import ANUSpider
 from class_parser import parse_requisites
 from models import Course
 from nlp_config import TARGET
+from spider_anu import SpiderANU
 
 
-class ClassSpider(ANUSpider):
+class SpiderClass(SpiderANU):
+    """This class is for scraping ANU classes"""
+
     name = 'ClassSpider'
     id_attribute_name = 'CourseCode'
     years = ['2020', '2021', '2022']

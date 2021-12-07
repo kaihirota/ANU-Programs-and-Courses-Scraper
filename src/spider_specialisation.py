@@ -1,15 +1,4 @@
-import json
-from collections import deque
-from typing import List
-
-import scrapy
-from scrapy import Selector
-
-from anu_spider import ANUSpider
-from models import Course, Requirement, Program, Specialization
-
-
-# class ProgramSpider(ANUSpider):
+# class ProgramSpider(SpiderANU):
 #     name = 'ProgramSpider'
 #     id_attribute_name = 'AcademicPlanCode'
 #     data_files = ['data/programs_undergrad.json', 'data/programs_postgrad.json']

@@ -7,11 +7,11 @@ import scrapy
 from bs4 import BeautifulSoup
 from scrapy.http.response.html import HtmlResponse
 
-from anu_spider import ANUSpider
 from models import Requirement, Program, Course
+from spider_anu import SpiderANU
 
 
-class ProgramSpider(ANUSpider):
+class SpiderProgram(SpiderANU):
     """This class is for scraping ANU programs - Master, Bachelor, Diploma, etc"""
 
     name = 'ProgramSpider'
