@@ -16,7 +16,7 @@ class SpiderProgram(SpiderANU):
 
     name = 'ProgramSpider'
     id_attribute_name = 'AcademicPlanCode'
-    data_files = ['data/programs_undergrad.json', 'data/programs_postgrad.json']
+    data_files = ['data/from_api/programs_undergrad.json', 'data/from_api/programs_postgrad.json']
 
     def start_requests(self):
         for file_path in self.data_files:
