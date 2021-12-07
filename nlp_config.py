@@ -9,7 +9,8 @@ PATTERNS = [
     {
         "label": "PROGRAM",
         "pattern": [
-            {"LOWER": {"IN": ["master", "masters"]}},
+            {"OP": "?", "LOWER": "executive"},
+            {"LOWER": {"IN": ["master", "masters", "doctor", "bachelor"]}},
             {"LOWER": "of"},
             {"OP": "+", "IS_TITLE": True},
             {"OP": "?", "TEXT": "("},
@@ -21,7 +22,33 @@ PATTERNS = [
     {
         "label": "PROGRAM",
         "pattern": [
-            {"LOWER": {"IN": ["master", "masters"]}},
+            {"OP": "?", "LOWER": "executive"},
+            {"LOWER": {"IN": ["master", "masters", "doctor", "bachelor"]}},
+            {"LOWER": "of"},
+            {"OP": "+", "IS_TITLE": True},
+            {"OP": "?", "TEXT": {"IN": ["in", "and", "of"]}},
+            {"OP": "+", "IS_TITLE": True}
+        ],
+        "id": "program"
+    },
+    {
+        "label": "PROGRAM",
+        "pattern": [
+            {"LOWER": "graduate"},
+            {"LOWER": {"IN": ["certificate", "diploma"]}},
+            {"LOWER": "of"},
+            {"OP": "+", "IS_TITLE": True},
+            {"OP": "?", "TEXT": "("},
+            {"OP": "?", "LOWER": {"IN": ["research", "advanced"]}},
+            {"OP": "?", "TEXT": ")"}
+        ],
+        "id": "program"
+    },
+    {
+        "label": "PROGRAM",
+        "pattern": [
+            {"LOWER": "graduate"},
+            {"LOWER": "certificate"},
             {"LOWER": "of"},
             {"OP": "+", "IS_TITLE": True},
             {"OP": "?", "TEXT": {"IN": ["in", "and", "of"]}},

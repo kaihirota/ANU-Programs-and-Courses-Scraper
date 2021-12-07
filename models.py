@@ -4,7 +4,6 @@ from scrapy import Field, Item
 
 
 class Course(Item):
-    type: 'course'
     id: str = Field()
     name: str = Field()
     n_units: int = Field()
@@ -16,20 +15,19 @@ class Course(Item):
 
 class Requirement(Item):
     n_units: int = Field()
-    items: List[str] = Field()
+    items: List[Course] = Field()
     description: str = Field()
 
 
 class Program(Item):
-    type: 'program'
     id: str = Field()
     name: str = Field()
     n_units: int = Field()
     requirements: List[Requirement] = Field()
+    specialisations: List[str] = Field()
 
 
 class Specialization(Item):
-    type: 'specialization'
     id: str = Field()
     name: str = Field()
     n_units: int = Field()
