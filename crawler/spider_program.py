@@ -3,8 +3,8 @@ import re
 from collections import Counter, OrderedDict
 from typing import List, Tuple, Union
 
-import scrapy
 from bs4 import BeautifulSoup
+import scrapy
 from scrapy.http.response.html import HtmlResponse
 
 from models import Requirement, Program, Course
