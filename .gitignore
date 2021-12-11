@@ -1,8 +1,10 @@
 #/data/
 /.ipynb_checkpoints/
 .idea
+
 custom_NER.ipynb
 scratch.ipynb
 Untitled.ipynb
+
 data.json
 /pretty.json
