@@ -28,6 +28,6 @@ class Program(Node):
     n_units: int = Field()
     requirements: List[Requirement] = Field()
 
-# class SpecializationPage(Specialization):
-#     n_units: int = Field()
-#     requirements: List[Requirement] = Field()
+class SpecializationPage(Specialization):
+    n_units: int = Field()
+    requirements: List[Requirement] = Field()

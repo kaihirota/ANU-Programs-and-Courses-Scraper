@@ -4,6 +4,7 @@ from collections import Counter, OrderedDict
 from typing import List, Tuple, Union
 
 from bs4 import BeautifulSoup
+from bs4.element import NavigableString
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 
@@ -22,9 +23,7 @@ class SpiderProgram(SpiderANU):
         for file_path in self.data_files:
             with open(file_path) as f:
                 data = json.load(f)
-                items = data['Items']
-
-                for item in items[:50]:
+                for item in data['Items']:
                     url = f"https://{self.DOMAIN}/program/{item[self.id_attribute_name]}"
                     yield scrapy.Request(url, self.parse)
 
@@ -60,10 +59,13 @@ class SpiderProgram(SpiderANU):
         elements = arr[0].contents
         elements_with_padding = []
         for elem in elements:
-            if elem.name == 'h2' and elem.text != 'Program Requirements':
+            if elem.name == 'h2' and elem.text != 'Program Requirements' and elem.text != 'Requirements':
                 break
             if elem.text in {"Minors", "Study Options", "Specialisations", "Honours grade calculation"}:
                 break
+
+            if elem.text in {"Major Requirements", "Specialisation Requirements", "Requirements", "Back to the top"}:
+                continue
 
             try:
                 attributes = dict([prop.split(':') for prop in elem.attrs['style'].split(';') if prop])
@@ -80,13 +82,33 @@ class SpiderProgram(SpiderANU):
                 padding = elements_with_padding[-1][1] + 1
                 for c in elem.children:
                     elements_with_padding += (c.text, padding),
+            elif elem.name and elem.name == 'table':
+                classes = self.parse_table(elem)
+                for c in classes:
+                    class_name = " ".join([s for s in c if len(s) > 2])
+                    elements_with_padding += (class_name, padding+20),
             else:
                 txt = elem.text
                 p = re.compile(r"([A-Z]{4}[0-9]{4})")
-                txt = p.sub(r' \1', txt)
-                txt = txt.replace('\n', '').replace('\xa0', '').strip()
+                txt = p.sub(r' \1 ', txt)
+                txt = txt.replace('\n', '').replace('\xa0', '').replace('  ', ' ').strip()
                 if txt:
-                    elements_with_padding += (txt, padding),
+                    doc = self.nlp(txt)
+                    classes = [ent.text for ent in doc.ents if ent.label_ == 'CLASS']
+                    if len(classes) > 1:
+                        s = ''
+                        for token in doc:
+                            if token.ent_type_ == 'CLASS':
+                                if s != '':
+                                    elements_with_padding += (s, padding),
+                                s = token.text
+                            else:
+                                s += ' ' + token.text
+                        if s != '':
+                            elements_with_padding += (s, padding),
+                            s = ''
+                    else:
+                        elements_with_padding += (txt, padding),
 
         def convert_padding_to_rank(elements: List[Tuple[str, int]]) -> List[Tuple[str, int]]:
             # use OrderedDict to preserve order
@@ -124,6 +146,18 @@ class SpiderProgram(SpiderANU):
             return ret
 
         return convert_padding_to_rank(elements_with_padding)
+
+    def parse_table(self, elem: NavigableString) -> List[List[str]]:
+        soup_table = BeautifulSoup(str(elem))
+
+        data = []
+        table_body = soup_table.find('tbody')
+        rows = table_body.find_all('tr')
+        for row in rows:
+            cols = row.find_all('td')
+            cols = [ele.text.strip() for ele in cols]
+            data += [ele for ele in cols if ele],  # Get rid of empty values
+        return data
 
     def group_requirements(
             self,
