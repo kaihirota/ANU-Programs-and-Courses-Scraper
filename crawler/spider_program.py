@@ -14,6 +14,7 @@ from spider_anu import SpiderANU
 
 class SpiderProgram(SpiderANU):
     """This class is for scraping ANU programs - Master, Bachelor, Diploma, etc"""
+    name = 'SpiderProgram'
     id_attribute_name = 'AcademicPlanCode'
     data_files = ['data/from_api/programs_undergrad.json', 'data/from_api/programs_postgrad.json']
 

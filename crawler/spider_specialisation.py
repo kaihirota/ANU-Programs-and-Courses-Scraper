@@ -9,6 +9,7 @@ from spider_program import SpiderProgram
 
 
 class SpiderSpecialisation(SpiderProgram):
+    name = 'SpiderSpecialisation'
     id_attribute_name = 'SubPlanCode'
 
     def start_requests(self):
@@ -23,6 +24,7 @@ class SpiderSpecialisation(SpiderProgram):
 
     def parse(self, response: HtmlResponse, **kwargs):
         if "Error" in response.url:
+            self.logger.info(response.url)
             return
 
         components = response.url.split('/')

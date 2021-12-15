@@ -7,15 +7,16 @@ Expression = Dict[str, Any]
 
 
 def split_expression(sent, token, start: int, end: int) -> Expression:
-    return {
-        'description': str(sent[start:end]),
-        'operator': {
-            token.text.upper(): [
-                parse_requisite_from_sent(sent, start, token.i),
-                parse_requisite_from_sent(sent, token.i + 1, end)
-            ]
+    if end != token.i:
+        return {
+            'description': str(sent[start:end]),
+            'operator': {
+                token.text.upper(): [
+                    parse_requisite_from_sent(sent, start, token.i),
+                    parse_requisite_from_sent(sent, token.i + 1, end)
+                ]
+            }
         }
-    }
 
 
 def parse_requisite_from_sent(sent, start: int = 0, end=None):
