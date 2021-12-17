@@ -5,9 +5,12 @@
 
 ## Stages
 
-### Tasks on hold:
-- [ ] add `CLASS_NAME` to NER pipeline?
+### Tasks
 
+- On Hold
+  - [ ] add `CLASS_NAME` to NER pipeline?
+- Fix data
+  - `ACST4031and`
 ### Stage 1: Build dataset
 
 - [x] Get JSON datasets through ANU API endpoints
@@ -16,14 +19,22 @@
     - [x] parse degree requirements
     - [x] update NER logic to exclude `(6 units)` in course name?
     - [x] parse specializations/majors/minors (as part of requirements)
+    - [ ] capture specialisations / majors / minors w.r.t. the degree program
   - concentrations / majors / minors
   - classes
     - Challenge: Translating unstructured "Requisites" into a structured boolean expression tree.
+    - [ ] fill in missing ids in program requirements (i.e. specialization, Master of xx as a requirement)
     - [ ] tag PGRD/UGRD and get more class info - co-taught, course convenor
     - [ ] clean up description for classes
+    - [ ] add subject area (COMP, MATH, etc)
 
 ### Stage 2: Build Neo4j Graph Database; create and expose GraphQL endpoint
-- Apollo / Graphene
+#### Neo4j
+![img/img1.jpg](img/img1.jpg)
+![img/img1.jpg](img/img2.jpg)
+
+#### GraphQL
+- Apollo
 
 ### Stage 3: WebApp
 
@@ -104,9 +115,9 @@ grep "condition" classes.json | awk -F" " '{print $2}' | sort | uniq -c | sort -
 
   # output
   #  56 "completed",
-  #  38 "incompatible",
-  #  36 "studying",
-  #  18 "enrolled",
+  #  38 "incompatible", -> Class
+  #  36 "studying", -> Program
+  #  18 "enrolled", -> Program, Class
   #  14 "Unknown",
   #  5 "permission",
   #  1 "obtained",
