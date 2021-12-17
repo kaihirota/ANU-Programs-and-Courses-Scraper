@@ -1,5 +1,7 @@
 .ipynb_checkpoints/
 .idea
+.DS_Store
+__pycache__
 
 custom_NER.ipynb
 scratch.ipynb
