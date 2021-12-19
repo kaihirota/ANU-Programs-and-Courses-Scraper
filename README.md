@@ -4,14 +4,14 @@
 ### Tasks
 - On Hold
   - [ ] add `CLASS_NAME` to NER pipeline?
-- Fix data
-  - `ACST4031and`
 - [x] Get JSON datasets through ANU API endpoints
 - Scrape [ANU Programs and Courses](https://programsandcourses.anu.edu.au/) for additional data
   - Programs:
     - [ ] capture specialisations / majors / minors w.r.t. the degree program
   - concentrations / majors / minors
   - classes
+    - `ACST4031and`
+    - Master of Laws (MLLM)
     - [ ] fill in missing ids in program requirements (i.e. specialization, Master of xx as a requirement)
     - [ ] tag PGRD/UGRD and get more class info - co-taught, course convenor
     - [ ] clean up description for classes
@@ -108,6 +108,9 @@ be enrolled in the Master of Computing (Advanced)."
 #### Neo4j (in progress)
 ![img/img1.jpg](img/img1.jpg)
 ![img/img1.jpg](img/img2.jpg)
+![img/img1.jpg](img/img3.jpg)
+![img/img1.jpg](img/img4.jpg)
+![img/img1.jpg](img/img5.jpg)
 
 #### GraphQL
 - Apollo
