@@ -167,8 +167,9 @@ def create_nodes_and_edges_if_program(doc: Dict, parent_node: Node, G: Graph, op
             label = 'class'
             dest_node = create_node_if_not_exists(CLASSES, doc, G, doc['id'], label)
         items += create_edge(Requirement(parent_node, dest_node), doc, G, label),
-    # elif 'id' not in doc and 'type' in doc and doc['type'] and doc['name']:
-    # items += create_nodes_and_edges_if_specialisation(doc, parent_node, G, op),
+    elif type(doc) == list:
+        for child in doc:
+            items.extend(create_nodes_and_edges_if_program(child, parent_node, G, op))
     else:
         print(doc)
     return items
