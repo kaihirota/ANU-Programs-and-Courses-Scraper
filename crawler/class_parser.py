@@ -1,9 +1,17 @@
 from collections import Counter
-from typing import Any, Dict
+import json
+from typing import Any, Dict, List
 
 from nlp_config import CONDITION_MAPPING
 
 Expression = Dict[str, Any]
+
+ALL_PROGRAMS = {}
+for file in ['data/from_api/programs_undergrad.json', 'data/from_api/programs_postgrad.json']:
+    with open(file) as f:
+        data = json.load(f)
+        for item in data['Items']:
+            ALL_PROGRAMS[item['ProgramName']] = item['AcademicPlanCode']
 
 
 def split_expression(sent, token, start: int, end: int) -> Expression:
@@ -19,7 +27,7 @@ def split_expression(sent, token, start: int, end: int) -> Expression:
         }
 
 
-def parse_requisite_from_sent(sent, start: int = 0, end=None):
+def parse_requisite_from_sent(sent, start: int = 0, end=None) -> Dict:
     counter = Counter()
 
     raw_txt = sent[start:end].text
@@ -154,8 +162,32 @@ def parse_requisite_from_sent(sent, start: int = 0, end=None):
     }
 
 
-def parse_requisites(doc):
+def clean_class_doc(doc: Dict) -> Dict:
+    # convert program names to program id
+    if not doc:
+        return None
+
+    if 'operator' in doc and type(doc['operator']) == dict:
+        for op in doc['operator'].keys():
+            for i in range(len(doc['operator'][op])):
+                doc['operator'][op][i] = clean_class_doc(doc['operator'][op][i])
+    elif 'programs' in doc and doc['programs']:
+        for i in range(len(doc['programs'])):
+            name_str = doc['programs'][i]
+            name_str = name_str.rstrip('(').strip()
+
+            if name_str in ALL_PROGRAMS:
+                name_str = ALL_PROGRAMS[name_str]
+
+            doc['programs'][i] = name_str
+    return doc
+
+
+def parse_requisites(doc) -> List[Dict]:
     reqs = []
     for sent in doc.sents:
         reqs += parse_requisite_from_sent(sent, 0, len(sent)),
+
+    for i in range(len(reqs)):
+        reqs[i] = clean_class_doc(reqs[i])
     return reqs

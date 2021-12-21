@@ -1,1110 +1,1110 @@
 {
-  "TotalCount": 139,
-  "Items": [
-    {
-      "Name": "Accounting",
-      "Units": 48.0,
-      "SubPlanCode": "ACCT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Advanced Intelligent Systems",
-      "Units": 48.0,
-      "SubPlanCode": "ADIS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Aerospace Systems Engineering",
-      "Units": 48.0,
-      "SubPlanCode": "ASSY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Agricultural Innovation",
-      "Units": 48.0,
-      "SubPlanCode": "AGIN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Agriculture Innovation",
-      "Units": 48.0,
-      "SubPlanCode": "AGIN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Ancient Greek",
-      "Units": 48.0,
-      "SubPlanCode": "AGRK-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Ancient History",
-      "Units": 48.0,
-      "SubPlanCode": "ANCH-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Anthropology",
-      "Units": 48.0,
-      "SubPlanCode": "ANTH-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Applied Statistics",
-      "Units": 48.0,
-      "SubPlanCode": "APST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Arabic",
-      "Units": 48.0,
-      "SubPlanCode": "ARAB-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Archaeology",
-      "Units": 48.0,
-      "SubPlanCode": "ARCH-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Art History and Theory",
-      "Units": 48.0,
-      "SubPlanCode": "AHIT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asia-Pacific International Relations",
-      "Units": 48.0,
-      "SubPlanCode": "APIR-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asia-Pacific Politics",
-      "Units": 48.0,
-      "SubPlanCode": "ASPP-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asia-Pacific Security Studies",
-      "Units": 48.0,
-      "SubPlanCode": "SECU-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asian Capital Markets",
-      "Units": 48.0,
-      "SubPlanCode": "ACMK-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asian History",
-      "Units": 48.0,
-      "SubPlanCode": "AHIST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asian Studies",
-      "Units": 48.0,
-      "SubPlanCode": "ASIA-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Asian and Pacific Culture, Media and Gender",
-      "Units": 48.0,
-      "SubPlanCode": "ACMG-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Astronomy and Astrophysics",
-      "Units": 48.0,
-      "SubPlanCode": "ASTR-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Australian Indigenous Studies",
-      "Units": 48.0,
-      "SubPlanCode": "AUIS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Biochemistry",
-      "Units": 48.0,
-      "SubPlanCode": "BCHM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Biodiversity Conservation",
-      "Units": 48.0,
-      "SubPlanCode": "BIOD-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Biological Anthropology",
-      "Units": 48.0,
-      "SubPlanCode": "BIAN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Business Information Systems",
-      "Units": 48.0,
-      "SubPlanCode": "BUSN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Capital Markets",
-      "Units": 48.0,
-      "SubPlanCode": "CPMK-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Cell & Molecular Biology",
-      "Units": 48.0,
-      "SubPlanCode": "CMBI-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Ceramics Design Arts",
-      "Units": 48.0,
-      "SubPlanCode": "CDAR-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Chemistry",
-      "Units": 48.0,
-      "SubPlanCode": "CHEM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Chinese Language",
-      "Units": 48.0,
-      "SubPlanCode": "CHIN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Chinese Studies",
-      "Units": 48.0,
-      "SubPlanCode": "CHST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Climate Science",
-      "Units": 48.0,
-      "SubPlanCode": "CLSC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Composition",
-      "Units": 48.0,
-      "SubPlanCode": "COMP-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Composition for Film and Video Games",
-      "Units": 48.0,
-      "SubPlanCode": "CFVG-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Computer Science",
-      "Units": 48.0,
-      "SubPlanCode": "CSCI-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Computer Systems",
-      "Units": 48.0,
-      "SubPlanCode": "COMS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Contemporary Europe",
-      "Units": 48.0,
-      "SubPlanCode": "EURO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Corporate Sustainability",
-      "Units": 48.0,
-      "SubPlanCode": "CORP-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Criminology",
-      "Units": 48.0,
-      "SubPlanCode": "CRIM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Cyber Security",
-      "Units": 48.0,
-      "SubPlanCode": "CSEC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Data Science",
-      "Units": 48.0,
-      "SubPlanCode": "DTSC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Demography",
-      "Units": 48.0,
-      "SubPlanCode": "DEMO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Development Studies",
-      "Units": 48.0,
-      "SubPlanCode": "DEST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Digital Humanities",
-      "Units": 48.0,
-      "SubPlanCode": "DIHU-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Digital Systems",
-      "Units": 48.0,
-      "SubPlanCode": "DIGS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Earth Science",
-      "Units": 48.0,
-      "SubPlanCode": "EART-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Economic Studies",
-      "Units": 48.0,
-      "SubPlanCode": "ECST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Electronic and Communication Systems",
-      "Units": 48.0,
-      "SubPlanCode": "ELCO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Engineering Science",
-      "Units": 48.0,
-      "SubPlanCode": "ENGS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "English",
-      "Units": 48.0,
-      "SubPlanCode": "ENGL-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Environmental Science",
-      "Units": 48.0,
-      "SubPlanCode": "ENVS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Environmental Studies",
-      "Units": 48.0,
-      "SubPlanCode": "ENST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Environmental Systems",
-      "Units": 48.0,
-      "SubPlanCode": "ESYS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "European History",
-      "Units": 48.0,
-      "SubPlanCode": "EHIS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Evolution, Ecology and Organismal Biology",
-      "Units": 48.0,
-      "SubPlanCode": "EEOB-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Finance",
-      "Units": 48.0,
-      "SubPlanCode": "FINM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "French Language and Culture",
-      "Units": 48.0,
-      "SubPlanCode": "FREN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Furniture Design Arts",
-      "Units": 48.0,
-      "SubPlanCode": "FDAR-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Gender, Sexuality and Culture",
-      "Units": 48.0,
-      "SubPlanCode": "GEND-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Geography",
-      "Units": 48.0,
-      "SubPlanCode": "GEOG-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "German Language and Culture",
-      "Units": 48.0,
-      "SubPlanCode": "GERM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Glass Design Arts",
-      "Units": 48.0,
-      "SubPlanCode": "GDAR-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Global Security",
-      "Units": 48.0,
-      "SubPlanCode": "GSEC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Gold & Silversmithing Design Arts",
-      "Units": 48.0,
-      "SubPlanCode": "GSDA-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Hindi Language",
-      "Units": 48.0,
-      "SubPlanCode": "HIND-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "History",
-      "Units": 48.0,
-      "SubPlanCode": "HIST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Human Biology",
-      "Units": 48.0,
-      "SubPlanCode": "HBIO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Human Evolutionary Biology",
-      "Units": 48.0,
-      "SubPlanCode": "HUEB-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Human Rights ",
-      "Units": 48.0,
-      "SubPlanCode": "HMRT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Indian and South Asian Studies",
-      "Units": 48.0,
-      "SubPlanCode": "INDS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Indigenous Science and Knowledges",
-      "Units": 48.0,
-      "SubPlanCode": "ISCK-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Indonesian Language",
-      "Units": 48.0,
-      "SubPlanCode": "INDN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Indonesian Studies",
-      "Units": 48.0,
-      "SubPlanCode": "INST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Information Systems",
-      "Units": 48.0,
-      "SubPlanCode": "INFS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Innovation and Professional Practice",
-      "Units": 48.0,
-      "SubPlanCode": "INPP-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Intelligent Systems",
-      "Units": 48.0,
-      "SubPlanCode": "INSY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Interdisciplinary Science",
-      "Units": 48.0,
-      "SubPlanCode": "INSC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "International Business",
-      "Units": 48.0,
-      "SubPlanCode": "INTB-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "International Communication",
-      "Units": 48.0,
-      "SubPlanCode": "ICOM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "International Relations",
-      "Units": 48.0,
-      "SubPlanCode": "IREL-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Italian Language and Culture",
-      "Units": 48.0,
-      "SubPlanCode": "ITAL-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Japanese Language",
-      "Units": 48.0,
-      "SubPlanCode": "JPNS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Japanese Linguistics",
-      "Units": 48.0,
-      "SubPlanCode": "JPLN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Japanese Studies",
-      "Units": 48.0,
-      "SubPlanCode": "JPST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Korean Language",
-      "Units": 48.0,
-      "SubPlanCode": "KORE-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Korean Studies",
-      "Units": 48.0,
-      "SubPlanCode": "KORS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Latin",
-      "Units": 48.0,
-      "SubPlanCode": "LATN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Latin American Studies",
-      "Units": 48.0,
-      "SubPlanCode": "LAMS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Linguistics",
-      "Units": 48.0,
-      "SubPlanCode": "LING-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Management",
-      "Units": 48.0,
-      "SubPlanCode": "MGMT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Marine Science",
-      "Units": 48.0,
-      "SubPlanCode": "MARS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Marketing",
-      "Units": 48.0,
-      "SubPlanCode": "MARK-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Mathematical Economics",
-      "Units": 48.0,
-      "SubPlanCode": "MECO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Mathematical Finance",
-      "Units": 48.0,
-      "SubPlanCode": "MFIN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Mathematical Modelling",
-      "Units": 48.0,
-      "SubPlanCode": "MMOD-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Mathematics",
-      "Units": 48.0,
-      "SubPlanCode": "MATH-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Mechanical and Material Systems",
-      "Units": 48.0,
-      "SubPlanCode": "MMSY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Mechatronic Systems",
-      "Units": 48.0,
-      "SubPlanCode": "MTSY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Middle Eastern and Central Asian Studies",
-      "Units": 48.0,
-      "SubPlanCode": "MECA-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Music",
-      "Units": 48.0,
-      "SubPlanCode": "MUSC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Music Technology",
-      "Units": 48.0,
-      "SubPlanCode": "MTEC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Musicology ",
-      "Units": 48.0,
-      "SubPlanCode": "MUSY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Northeast Asian Studies",
-      "Units": 48.0,
-      "SubPlanCode": "NAST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Pacific Studies",
-      "Units": 48.0,
-      "SubPlanCode": "PAST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Peace and Conflict Studies",
-      "Units": 48.0,
-      "SubPlanCode": "PECO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Performance",
-      "Units": 48.0,
-      "SubPlanCode": "PERF-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Persian",
-      "Units": 48.0,
-      "SubPlanCode": "PERS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Philosophy",
-      "Units": 48.0,
-      "SubPlanCode": "PHIL-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Photonic Systems",
-      "Units": 48.0,
-      "SubPlanCode": "PHOT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Physics",
-      "Units": 48.0,
-      "SubPlanCode": "PHYS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Political Science",
-      "Units": 48.0,
-      "SubPlanCode": "POLS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Probability and Stochastic Processes",
-      "Units": 48.0,
-      "SubPlanCode": "PSTO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Psychology",
-      "Units": 48.0,
-      "SubPlanCode": "PSYC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Quantitative Biology",
-      "Units": 48.0,
-      "SubPlanCode": "QBIO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Quantitative Environmental Modelling",
-      "Units": 48.0,
-      "SubPlanCode": "QUEM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Quantitative Finance",
-      "Units": 48.0,
-      "SubPlanCode": "QFIN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Renewable Energy Systems",
-      "Units": 48.0,
-      "SubPlanCode": "RENE-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Research and Development",
-      "Units": 48.0,
-      "SubPlanCode": "RSCC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Resource and Environmental Management",
-      "Units": 48.0,
-      "SubPlanCode": "REEN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Sanskrit Language",
-      "Units": 48.0,
-      "SubPlanCode": "SANS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Science Communication",
-      "Units": 48.0,
-      "SubPlanCode": "SCOM-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Screen Studies",
-      "Units": 48.0,
-      "SubPlanCode": "SCRN-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Sociology",
-      "Units": 48.0,
-      "SubPlanCode": "SOCY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Software Development",
-      "Units": 48.0,
-      "SubPlanCode": "SOFT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Southeast Asian Studies",
-      "Units": 48.0,
-      "SubPlanCode": "SEAS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Spanish",
-      "Units": 48.0,
-      "SubPlanCode": "SPAH-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Statistical Data Analytics",
-      "Units": 48.0,
-      "SubPlanCode": "STDA-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Statistics",
-      "Units": 48.0,
-      "SubPlanCode": "STAT-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Sustainability Studies",
-      "Units": 48.0,
-      "SubPlanCode": "SUST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Sustainable Systems",
-      "Units": 48.0,
-      "SubPlanCode": "SUSY-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": ""
-    },
-    {
-      "Name": "Technology, Networks and Society",
-      "Units": 48.0,
-      "SubPlanCode": "TNSO-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Textiles Design Arts",
-      "Units": 48.0,
-      "SubPlanCode": "TDAR-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Thai Language",
-      "Units": 48.0,
-      "SubPlanCode": "THAI-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Theoretical Statistics",
-      "Units": 48.0,
-      "SubPlanCode": "THST-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Vietnamese Language",
-      "Units": 48.0,
-      "SubPlanCode": "VIET-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "War Studies",
-      "Units": 48.0,
-      "SubPlanCode": "WARS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Water Science",
-      "Units": 48.0,
-      "SubPlanCode": "WASC-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    },
-    {
-      "Name": "Year in Asia",
-      "Units": 48.0,
-      "SubPlanCode": "YIAS-MAJ",
-      "SubplanType": "MAJ",
-      "Year": 2022,
-      "Career": "Undergraduate"
-    }
-  ],
-  "Suggestion": null
+    "Items": [
+        {
+            "Career": "Undergraduate",
+            "Name": "Accounting",
+            "SubPlanCode": "ACCT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Advanced Intelligent Systems",
+            "SubPlanCode": "ADIS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Aerospace Systems Engineering",
+            "SubPlanCode": "ASSY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Agricultural Innovation",
+            "SubPlanCode": "AGIN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Agriculture Innovation",
+            "SubPlanCode": "AGIN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Ancient Greek",
+            "SubPlanCode": "AGRK-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Ancient History",
+            "SubPlanCode": "ANCH-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Anthropology",
+            "SubPlanCode": "ANTH-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Applied Statistics",
+            "SubPlanCode": "APST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Arabic",
+            "SubPlanCode": "ARAB-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Archaeology",
+            "SubPlanCode": "ARCH-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Art History and Theory",
+            "SubPlanCode": "AHIT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asia-Pacific International Relations",
+            "SubPlanCode": "APIR-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asia-Pacific Politics",
+            "SubPlanCode": "ASPP-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asia-Pacific Security Studies",
+            "SubPlanCode": "SECU-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asian Capital Markets",
+            "SubPlanCode": "ACMK-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asian History",
+            "SubPlanCode": "AHIST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asian Studies",
+            "SubPlanCode": "ASIA-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Asian and Pacific Culture, Media and Gender",
+            "SubPlanCode": "ACMG-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Astronomy and Astrophysics",
+            "SubPlanCode": "ASTR-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Australian Indigenous Studies",
+            "SubPlanCode": "AUIS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Biochemistry",
+            "SubPlanCode": "BCHM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Biodiversity Conservation",
+            "SubPlanCode": "BIOD-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Biological Anthropology",
+            "SubPlanCode": "BIAN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Business Information Systems",
+            "SubPlanCode": "BUSN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Capital Markets",
+            "SubPlanCode": "CPMK-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Cell & Molecular Biology",
+            "SubPlanCode": "CMBI-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Ceramics Design Arts",
+            "SubPlanCode": "CDAR-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Chemistry",
+            "SubPlanCode": "CHEM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Chinese Language",
+            "SubPlanCode": "CHIN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Chinese Studies",
+            "SubPlanCode": "CHST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Climate Science",
+            "SubPlanCode": "CLSC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Composition",
+            "SubPlanCode": "COMP-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Composition for Film and Video Games",
+            "SubPlanCode": "CFVG-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Computer Science",
+            "SubPlanCode": "CSCI-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Computer Systems",
+            "SubPlanCode": "COMS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Contemporary Europe",
+            "SubPlanCode": "EURO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Corporate Sustainability",
+            "SubPlanCode": "CORP-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Criminology",
+            "SubPlanCode": "CRIM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Cyber Security",
+            "SubPlanCode": "CSEC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Data Science",
+            "SubPlanCode": "DTSC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Demography",
+            "SubPlanCode": "DEMO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Development Studies",
+            "SubPlanCode": "DEST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Digital Humanities",
+            "SubPlanCode": "DIHU-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Digital Systems",
+            "SubPlanCode": "DIGS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Earth Science",
+            "SubPlanCode": "EART-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Economic Studies",
+            "SubPlanCode": "ECST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Electronic and Communication Systems",
+            "SubPlanCode": "ELCO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Engineering Science",
+            "SubPlanCode": "ENGS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "English",
+            "SubPlanCode": "ENGL-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Environmental Science",
+            "SubPlanCode": "ENVS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Environmental Studies",
+            "SubPlanCode": "ENST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Environmental Systems",
+            "SubPlanCode": "ESYS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "European History",
+            "SubPlanCode": "EHIS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Evolution, Ecology and Organismal Biology",
+            "SubPlanCode": "EEOB-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Finance",
+            "SubPlanCode": "FINM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "French Language and Culture",
+            "SubPlanCode": "FREN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Furniture Design Arts",
+            "SubPlanCode": "FDAR-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Gender, Sexuality and Culture",
+            "SubPlanCode": "GEND-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Geography",
+            "SubPlanCode": "GEOG-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "German Language and Culture",
+            "SubPlanCode": "GERM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Glass Design Arts",
+            "SubPlanCode": "GDAR-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Global Security",
+            "SubPlanCode": "GSEC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Gold & Silversmithing Design Arts",
+            "SubPlanCode": "GSDA-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Hindi Language",
+            "SubPlanCode": "HIND-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "History",
+            "SubPlanCode": "HIST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Human Biology",
+            "SubPlanCode": "HBIO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Human Evolutionary Biology",
+            "SubPlanCode": "HUEB-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Human Rights ",
+            "SubPlanCode": "HMRT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Indian and South Asian Studies",
+            "SubPlanCode": "INDS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Indigenous Science and Knowledges",
+            "SubPlanCode": "ISCK-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Indonesian Language",
+            "SubPlanCode": "INDN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Indonesian Studies",
+            "SubPlanCode": "INST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Information Systems",
+            "SubPlanCode": "INFS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Innovation and Professional Practice",
+            "SubPlanCode": "INPP-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Intelligent Systems",
+            "SubPlanCode": "INSY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Interdisciplinary Science",
+            "SubPlanCode": "INSC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "International Business",
+            "SubPlanCode": "INTB-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "International Communication",
+            "SubPlanCode": "ICOM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "International Relations",
+            "SubPlanCode": "IREL-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Italian Language and Culture",
+            "SubPlanCode": "ITAL-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Japanese Language",
+            "SubPlanCode": "JPNS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Japanese Linguistics",
+            "SubPlanCode": "JPLN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Japanese Studies",
+            "SubPlanCode": "JPST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Korean Language",
+            "SubPlanCode": "KORE-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Korean Studies",
+            "SubPlanCode": "KORS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Latin",
+            "SubPlanCode": "LATN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Latin American Studies",
+            "SubPlanCode": "LAMS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Linguistics",
+            "SubPlanCode": "LING-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Management",
+            "SubPlanCode": "MGMT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Marine Science",
+            "SubPlanCode": "MARS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Marketing",
+            "SubPlanCode": "MARK-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Mathematical Economics",
+            "SubPlanCode": "MECO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Mathematical Finance",
+            "SubPlanCode": "MFIN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Mathematical Modelling",
+            "SubPlanCode": "MMOD-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Mathematics",
+            "SubPlanCode": "MATH-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Mechanical and Material Systems",
+            "SubPlanCode": "MMSY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Mechatronic Systems",
+            "SubPlanCode": "MTSY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Middle Eastern and Central Asian Studies",
+            "SubPlanCode": "MECA-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Music",
+            "SubPlanCode": "MUSC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Music Technology",
+            "SubPlanCode": "MTEC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Musicology ",
+            "SubPlanCode": "MUSY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Northeast Asian Studies",
+            "SubPlanCode": "NAST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Pacific Studies",
+            "SubPlanCode": "PAST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Peace and Conflict Studies",
+            "SubPlanCode": "PECO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Performance",
+            "SubPlanCode": "PERF-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Persian",
+            "SubPlanCode": "PERS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Philosophy",
+            "SubPlanCode": "PHIL-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Photonic Systems",
+            "SubPlanCode": "PHOT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Physics",
+            "SubPlanCode": "PHYS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Political Science",
+            "SubPlanCode": "POLS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Probability and Stochastic Processes",
+            "SubPlanCode": "PSTO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Psychology",
+            "SubPlanCode": "PSYC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Quantitative Biology",
+            "SubPlanCode": "QBIO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Quantitative Environmental Modelling",
+            "SubPlanCode": "QUEM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Quantitative Finance",
+            "SubPlanCode": "QFIN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Renewable Energy Systems",
+            "SubPlanCode": "RENE-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Research and Development",
+            "SubPlanCode": "RSCC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Resource and Environmental Management",
+            "SubPlanCode": "REEN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Sanskrit Language",
+            "SubPlanCode": "SANS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Science Communication",
+            "SubPlanCode": "SCOM-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Screen Studies",
+            "SubPlanCode": "SCRN-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Sociology",
+            "SubPlanCode": "SOCY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Software Development",
+            "SubPlanCode": "SOFT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Southeast Asian Studies",
+            "SubPlanCode": "SEAS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Spanish",
+            "SubPlanCode": "SPAH-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Statistical Data Analytics",
+            "SubPlanCode": "STDA-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Statistics",
+            "SubPlanCode": "STAT-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Sustainability Studies",
+            "SubPlanCode": "SUST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "",
+            "Name": "Sustainable Systems",
+            "SubPlanCode": "SUSY-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Technology, Networks and Society",
+            "SubPlanCode": "TNSO-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Textiles Design Arts",
+            "SubPlanCode": "TDAR-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Thai Language",
+            "SubPlanCode": "THAI-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Theoretical Statistics",
+            "SubPlanCode": "THST-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Vietnamese Language",
+            "SubPlanCode": "VIET-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "War Studies",
+            "SubPlanCode": "WARS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Water Science",
+            "SubPlanCode": "WASC-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        },
+        {
+            "Career": "Undergraduate",
+            "Name": "Year in Asia",
+            "SubPlanCode": "YIAS-MAJ",
+            "SubplanType": "MAJ",
+            "Units": 48.0,
+            "Year": 2022
+        }
+    ],
+    "Suggestion": null,
+    "TotalCount": 139
 }

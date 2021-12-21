@@ -69,20 +69,27 @@ class SpiderProgram(SpiderANU):
             yield p
 
     def fix_specialisation_req(self, req: Union[Course, Specialization, Requirement], spec: List[Specialization]) -> Union[Specialization, Requirement]:
-        # look for specialisations in
         if 'items' in req and req['items']:
+            # look for specialisations in
             for i in range(len(req['items'])):
                 req['items'][i] = self.fix_specialisation_req(req['items'][i], spec)
             return req
-        # add id from specialisations list
-
         elif 'programs' in req and req['programs']:
+            # add id from specialisations list
             for i in range(len(req['programs'])):
                 req['items'][i] = self.fix_specialisation_req(req['items'][i], spec)
             return req
         elif type(req) == Specialization:
             req['type'] = req['type'].lower()
             req['type'] = SPEC_MAPPER[req['type']] if req['type'] in SPEC_MAPPER else req['type']
+
+            if req['name'].endswith('Minor'):
+                req['name'] = req['name'].rstrip('Minor').strip()
+            if req['name'].endswith('Major'):
+                req['name'] = req['name'].rstrip('Major').strip()
+            if req['name'].endswith('Specialisation'):
+                req['name'] = req['name'].rstrip('Specialisation').strip()
+
             for item in spec:
                 if req['name'] == item['name'] and req['type'] == item['type']:
                     return item
