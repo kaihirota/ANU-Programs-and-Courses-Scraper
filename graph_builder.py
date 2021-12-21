@@ -6,31 +6,9 @@ from pprint import pprint
 from py2neo import Graph, Node, Relationship, Subgraph
 from typing import Dict, List
 
-ALL_SPECIALISATIONS = {}
-specialisations_dir = 'data/from_api/specialisations'
-
-for file in os.listdir(specialisations_dir):
-    _, fn = os.path.split(file)
-    filename, _ = os.path.splitext(fn)
-
-    with open(os.path.join(specialisations_dir, file)) as f:
-        data = json.load(f)
-        for item in data['Items']:
-            ALL_SPECIALISATIONS[item['SubPlanCode']] = item
-
 CLASSES = defaultdict(lambda: Node("class"))
 PROGRAMS = defaultdict(lambda: Node("program"))
 SPECIAL = defaultdict(lambda: Node("specialisation"))
-
-SPEC_MAPPER = {
-    'major': 'MAJ',
-    'minor': 'MIN',
-    'specialisation': 'SPC',
-    'specialization': 'SPC',
-    'maj': 'MAJ',
-    'min': 'MIN',
-    'spc': 'SPC'
-}
 
 
 class Prerequisite(Relationship):
@@ -159,7 +137,6 @@ def create_requirement_node(doc: Dict, parent_node: Node, G: Graph) -> Relations
         label = 'specialisation'
     else:
         label = 'class'
-    # print(label, parent_node, req_node, doc)
     return create_edge(Requirement(parent_node, req_node), doc, G, label)
 
 
@@ -190,8 +167,10 @@ def create_nodes_and_edges_if_program(doc: Dict, parent_node: Node, G: Graph, op
             label = 'class'
             dest_node = create_node_if_not_exists(CLASSES, doc, G, doc['id'], label)
         items += create_edge(Requirement(parent_node, dest_node), doc, G, label),
-    elif 'type' in doc and doc['type'] and doc['name']:
-        items += create_nodes_and_edges_if_specialisation(doc, parent_node, G, op),
+    # elif 'id' not in doc and 'type' in doc and doc['type'] and doc['name']:
+    # items += create_nodes_and_edges_if_specialisation(doc, parent_node, G, op),
+    else:
+        print(doc)
     return items
 
 
@@ -199,24 +178,3 @@ def get_id_from_string(s: str) -> str:
     m = hashlib.md5()
     m.update(s)
     return str(int(m.hexdigest(), 16))[0:12]
-
-
-def create_nodes_and_edges_if_specialisation(doc: Dict, parent_node: Node, G: Graph, op: str = 'and') -> Relationship:
-    assert 'type' in doc and 'name' in doc
-    # get id if it does not exist
-    if 'id' not in doc:
-        doc['type'] = SPEC_MAPPER[doc['type'].lower()]
-
-        name = doc['name']
-        if name.endswith('Major'):
-            name = name.replace('Major', '').strip()
-        elif name.endswith('Minor'):
-            name = name.replace('Minor', '').strip()
-
-        for key, val in ALL_SPECIALISATIONS.items():
-            if name == val['Name'] and doc['type'] == val['SubplanType']:
-                doc['id'] = key
-
-    if 'id' in doc:
-        dest_node = create_node_if_not_exists(SPECIAL, doc, G, doc['id'], 'specialisation')
-        return create_edge(Requirement(parent_node, dest_node), doc, G, 'specialisation')

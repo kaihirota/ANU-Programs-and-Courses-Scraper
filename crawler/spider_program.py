@@ -1,6 +1,7 @@
-import json
-import re
 from collections import Counter, OrderedDict
+import json
+import os
+import re
 from typing import List, Tuple, Union
 
 from bs4 import BeautifulSoup
@@ -11,12 +12,35 @@ from scrapy.http.response.html import HtmlResponse
 from models import Program, Requirement, Specialization, Course
 from spider_anu import SpiderANU
 
+ALL_SPECIALISATIONS = {}
+specialisations_dir = 'data/from_api/specialisations'
+for file in os.listdir(specialisations_dir):
+    _, fn = os.path.split(file)
+    filename, _ = os.path.splitext(fn)
+
+    with open(os.path.join(specialisations_dir, file)) as f:
+        data = json.load(f)
+        for item in data['Items']:
+            ALL_SPECIALISATIONS[item['SubPlanCode']] = item
+
+SPEC_MAPPER = {
+    'major': 'MAJ',
+    'minor': 'MIN',
+    'specialisation': 'SPC',
+    'specialization': 'SPC',
+    'maj': 'MAJ',
+    'min': 'MIN',
+    'spc': 'SPC'
+}
 
 class SpiderProgram(SpiderANU):
     """This class is for scraping ANU programs - Master, Bachelor, Diploma, etc"""
     name = 'SpiderProgram'
     id_attribute_name = 'AcademicPlanCode'
     data_files = ['data/from_api/programs_undergrad.json', 'data/from_api/programs_postgrad.json']
+    html_path = '//div[has-class("body", "transition")]' \
+                '/div[@id="study"]' \
+                '/div[has-class("body__inner", "w-doublewide", "copy")]'
 
     def start_requests(self):
         for file_path in self.data_files:
@@ -38,18 +62,71 @@ class SpiderProgram(SpiderANU):
             p['name'] = program_name
             p['n_units'] = self.parse_unit(response)
             p['requirements'] = self.parse_requirements(response)
+            p['specialisations'] = self.extract_specialisations(response)
+            if p['specialisations']:
+                for i in range(len(p['requirements'])):
+                    p['requirements'][i] = self.fix_specialisation_req(p['requirements'][i], p['specialisations'])
             yield p
+
+    def fix_specialisation_req(self, req: Union[Course, Specialization, Requirement], spec: List[Specialization]) -> Union[Specialization, Requirement]:
+        # look for specialisations in
+        if 'items' in req and req['items']:
+            for i in range(len(req['items'])):
+                req['items'][i] = self.fix_specialisation_req(req['items'][i], spec)
+            return req
+        # add id from specialisations list
+
+        elif 'programs' in req and req['programs']:
+            for i in range(len(req['programs'])):
+                req['items'][i] = self.fix_specialisation_req(req['items'][i], spec)
+            return req
+        elif type(req) == Specialization:
+            req['type'] = req['type'].lower()
+            req['type'] = SPEC_MAPPER[req['type']] if req['type'] in SPEC_MAPPER else req['type']
+            for item in spec:
+                if req['name'] == item['name'] and req['type'] == item['type']:
+                    return item
+        else:
+            return req
+
+    def extract_specialisations(self, response: HtmlResponse) -> List[Specialization]:
+        html = response.xpath(self.html_path).get()
+        soup = BeautifulSoup(html, 'html.parser')
+        spec_headings = {'Majors', 'Minors', 'Specialisations'}
+
+        arr = []
+        for child in soup.children:
+            arr += child,
+
+        elements = arr[0].contents[::-1]
+        elements = [elem for elem in elements if type(elem) != NavigableString]
+        specialisations = []
+
+        while elements:
+            elem = elements.pop()
+            if elem.name == 'h2' and elem.text in spec_headings:
+                next_elem = elements.pop()
+                if next_elem.name == 'div' and 'body__inner__columns' in next_elem.attrs['class']:
+                    children = next_elem.find_all('a')
+                    for child in children:
+                        spec_name = child.text
+                        _, spec_type, spec_id = child.attrs['href'].split('/')
+
+                        data = Specialization()
+                        data['id'] = spec_id
+                        data['name'] = spec_name
+                        data['type'] = SPEC_MAPPER[spec_type] if spec_type in SPEC_MAPPER else spec_type
+                        specialisations += data,
+        return specialisations
 
     def convert_response_for_requirements_to_str(self, response: HtmlResponse) -> List[Tuple[str, int]]:
         """
         parse the response and extract requirements as a list of string and indentation level
         """
-        html_path = '//div[has-class("body", "transition")]' \
-                    '/div[@id="study"]' \
-                    '/div[has-class("body__inner", "w-doublewide", "copy")]'
-
-        html = response.xpath(html_path).get()
+        html = response.xpath(self.html_path).get()
         soup = BeautifulSoup(html, 'html.parser')
+        req_headings = {'Program Requirements', 'Requirements', "Major Requirements", "Specialisation Requirements",
+                        "Honours"}
 
         arr = []
         for child in soup.children:
@@ -58,13 +135,8 @@ class SpiderProgram(SpiderANU):
         elements = arr[0].contents
         elements_with_padding = []
         for elem in elements:
-            if elem.name == 'h2' and elem.text != 'Program Requirements' and elem.text != 'Requirements':
+            if elem.name == 'h2' and elem.text not in req_headings:
                 break
-            if elem.text in {"Minors", "Study Options", "Specialisations", "Honours grade calculation"}:
-                break
-
-            if elem.text in {"Major Requirements", "Specialisation Requirements", "Requirements", "Back to the top"}:
-                continue
 
             try:
                 attributes = dict([prop.split(':') for prop in elem.attrs['style'].split(';') if prop])
@@ -85,7 +157,7 @@ class SpiderProgram(SpiderANU):
                 classes = self.parse_table(elem)
                 for c in classes:
                     class_name = " ".join([s for s in c if len(s) > 2])
-                    elements_with_padding += (class_name, padding+20),
+                    elements_with_padding += (class_name, padding + 20),
             else:
                 txt = elem.text
                 p = re.compile(r"([A-Z]{4}[0-9]{4})")
@@ -161,10 +233,10 @@ class SpiderProgram(SpiderANU):
     def group_requirements(
             self,
             data: List[Tuple[Union[str, List[str]], int]],
-            current_indent_level: int=0,
-            is_specialisation: bool=False,
-            specialisation_type: str=None
-    ) -> List[Union[Course, Requirement, Specialization]]:
+            current_indent_level: int = 0,
+            is_specialisation: bool = False,
+            specialisation_type: str = None
+    ) -> List[Union[Course, Specialization, Requirement]]:
         requirements = []
         while data:
             line, indent = data.pop()
@@ -189,7 +261,8 @@ class SpiderProgram(SpiderANU):
                 elif 'minor' in line:
                     req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'Minor')
                 elif 'specialisation' in line:
-                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'Specialization')
+                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True,
+                                                           'Specialization')
                 else:
                     # sometimes there will be lines like "6 units from completion of COMPxxxx"
                     if classes and not req['items']:
@@ -256,19 +329,19 @@ class SpiderProgram(SpiderANU):
                         while data and data[-1][0].replace(":", "") != 'Or':
                             children += data.pop(),
 
-                        item['items'] += self.group_requirements(children[::-1], current_indent_level+1),
+                        item['items'] += self.group_requirements(children[::-1], current_indent_level + 1),
 
                         if not data:
                             break
 
-                        data.pop() # throw away "Or"
+                        data.pop()  # throw away "Or"
 
                         children2 = []
                         children2 += data.pop(),
                         while data and data[-1][1] > children2[0][1]:
                             children2 += data.pop(),
 
-                        item['items'] += self.group_requirements(children2[::-1], current_indent_level+1),
+                        item['items'] += self.group_requirements(children2[::-1], current_indent_level + 1),
                         # item['n_units']
                         requirements += item,
                     elif is_specialisation:

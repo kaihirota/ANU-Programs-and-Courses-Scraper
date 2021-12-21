@@ -27,6 +27,7 @@ class Requirement(Item):
 class Program(Node):
     n_units: int = Field()
     requirements: List[Requirement] = Field()
+    specialisations: List[Specialization] = Field()
 
 class SpecializationPage(Specialization):
     n_units: int = Field()
