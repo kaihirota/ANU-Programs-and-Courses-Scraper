@@ -63,38 +63,26 @@ class SpiderProgram(SpiderANU):
             p['n_units'] = self.parse_unit(response)
             p['requirements'] = self.parse_requirements(response)
             p['specialisations'] = self.extract_specialisations(response)
-            if p['specialisations']:
-                for i in range(len(p['requirements'])):
-                    p['requirements'][i] = self.fix_specialisation_req(p['requirements'][i], p['specialisations'])
             yield p
 
-    def fix_specialisation_req(self, req: Union[Course, Specialization, Requirement], spec: List[Specialization]) -> Union[Specialization, Requirement]:
-        if 'items' in req and req['items']:
-            # look for specialisations in
-            for i in range(len(req['items'])):
-                req['items'][i] = self.fix_specialisation_req(req['items'][i], spec)
-            return req
-        elif 'programs' in req and req['programs']:
-            # add id from specialisations list
-            for i in range(len(req['programs'])):
-                req['items'][i] = self.fix_specialisation_req(req['items'][i], spec)
-            return req
-        elif type(req) == Specialization:
-            req['type'] = req['type'].lower()
-            req['type'] = SPEC_MAPPER[req['type']] if req['type'] in SPEC_MAPPER else req['type']
+    def fix_specialisation_req(self, spec: Specialization, records: List[Specialization]) -> Specialization:
+        # clean up name
+        if spec['name'].endswith('Minor'):
+            spec['name'] = spec['name'].rstrip('Minor').strip()
+        if spec['name'].endswith('Major'):
+            spec['name'] = spec['name'].rstrip('Major').strip()
+        if spec['name'].endswith('Specialisation'):
+            spec['name'] = spec['name'].rstrip('Specialisation').strip()
 
-            if req['name'].endswith('Minor'):
-                req['name'] = req['name'].rstrip('Minor').strip()
-            if req['name'].endswith('Major'):
-                req['name'] = req['name'].rstrip('Major').strip()
-            if req['name'].endswith('Specialisation'):
-                req['name'] = req['name'].rstrip('Specialisation').strip()
+        # remap specialisation type
+        spec['type'] = spec['type'].lower()
+        spec['type'] = SPEC_MAPPER[spec['type']] if spec['type'] in SPEC_MAPPER else spec['type']
 
-            for item in spec:
-                if req['name'] == item['name'] and req['type'] == item['type']:
-                    return item
-        else:
-            return req
+        # find matching specialisation
+        for item in records:
+            if spec['name'] == item['name'] and spec['type'] == item['type']:
+                return item
+        return spec
 
     def extract_specialisations(self, response: HtmlResponse) -> List[Specialization]:
         html = response.xpath(self.html_path).get()
@@ -117,13 +105,17 @@ class SpiderProgram(SpiderANU):
                     children = next_elem.find_all('a')
                     for child in children:
                         spec_name = child.text
-                        _, spec_type, spec_id = child.attrs['href'].split('/')
+                        if spec_name.endswith('Minor'):
+                            spec_name = spec_name.replace('Minor', '').strip()
 
-                        data = Specialization()
-                        data['id'] = spec_id
-                        data['name'] = spec_name
-                        data['type'] = SPEC_MAPPER[spec_type] if spec_type in SPEC_MAPPER else spec_type
-                        specialisations += data,
+                        _, spec_type, spec_id = child.attrs['href'].split('/')
+                        spec_type = spec_type
+
+                        spec = Specialization()
+                        spec['id'] = spec_id
+                        spec['name'] = spec_name
+                        spec['type'] = spec_type
+                        specialisations += self.fix_specialisation_req(spec, ALL_SPECIALISATIONS),
         return specialisations
 
     def convert_response_for_requirements_to_str(self, response: HtmlResponse) -> List[Tuple[str, int]]:
