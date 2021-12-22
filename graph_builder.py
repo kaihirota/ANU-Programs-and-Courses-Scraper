@@ -194,7 +194,7 @@ def get_id_from_string(s: str) -> str:
     return str(int(m.hexdigest(), 16))[0:12]
 
 def main():
-    G = Graph("bolt://localhost:7687")
+    G = Graph("bolt://localhost:7687", auth=('neo4j', 'letmein'))
 
     G.delete_all()
 
