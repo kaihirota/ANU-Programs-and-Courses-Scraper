@@ -2,17 +2,9 @@ from collections import Counter
 import json
 from typing import Any, Dict, List
 
-from nlp_config import CONDITION_MAPPING
+from nlp_config import CONDITION_MAPPING, ALL_PROGRAMS
 
 Expression = Dict[str, Any]
-
-ALL_PROGRAMS = {}
-for file in ['data/from_api/programs_undergrad.json', 'data/from_api/programs_postgrad.json']:
-    with open(file) as f:
-        data = json.load(f)
-        for item in data['Items']:
-            ALL_PROGRAMS[item['ProgramName']] = item['AcademicPlanCode']
-
 
 def split_expression(sent, token, start: int, end: int) -> Expression:
     if end != token.i:

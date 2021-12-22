@@ -9,29 +9,10 @@ from bs4.element import NavigableString
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 
+from nlp_config import SPEC_MAPPER, ALL_SPECIALISATIONS
 from models import Program, Requirement, Specialization, Course
 from spider_anu import SpiderANU
 
-ALL_SPECIALISATIONS = {}
-specialisations_dir = 'data/from_api/specialisations'
-for file in os.listdir(specialisations_dir):
-    _, fn = os.path.split(file)
-    filename, _ = os.path.splitext(fn)
-
-    with open(os.path.join(specialisations_dir, file)) as f:
-        data = json.load(f)
-        for item in data['Items']:
-            ALL_SPECIALISATIONS[item['SubPlanCode']] = item
-
-SPEC_MAPPER = {
-    'major': 'MAJ',
-    'minor': 'MIN',
-    'specialisation': 'SPC',
-    'specialization': 'SPC',
-    'maj': 'MAJ',
-    'min': 'MIN',
-    'spc': 'SPC'
-}
 
 class SpiderProgram(SpiderANU):
     """This class is for scraping ANU programs - Master, Bachelor, Diploma, etc"""
@@ -61,28 +42,62 @@ class SpiderProgram(SpiderANU):
             p['id'] = program_id
             p['name'] = program_name
             p['n_units'] = self.parse_unit(response)
-            p['requirements'] = self.parse_requirements(response)
             p['specialisations'] = self.extract_specialisations(response)
+            p['requirements'] = self.parse_requirements(response)
+            for i in range(len(p['requirements'])):
+                p['requirements'][i] = self.fix_requirement(p['requirements'][i], p['specialisations'])
             yield p
 
-    def fix_specialisation_req(self, spec: Specialization, records: Dict[str, Specialization]) -> Specialization:
-        # clean up name
-        if spec['name'].endswith('Minor'):
-            spec['name'] = spec['name'].rstrip('Minor').strip()
-        if spec['name'].endswith('Major'):
-            spec['name'] = spec['name'].rstrip('Major').strip()
-        if spec['name'].endswith('Specialisation'):
-            spec['name'] = spec['name'].rstrip('Specialisation').strip()
+    def fix_requirement(self, req: Union[Requirement, Specialization], records: List[Specialization]) -> Union[Requirement, Specialization]:
+        if 'items' in req and req['items']:
+            for i in range(len(req['items'])):
+                req['items'][i] = self.fix_requirement(req['items'][i], records)
+        if type(req) == Specialization:
+            if 'name' in req:
+                req['name'] = self.fix_specialisation_name(req['name'])
+            if 'id' not in req:
+                for item in records:
+                    if item['name'] == req['name'] and item['type'] == req['type']:
+                        req['id'] = item['id']
+                        return req
+            if 'id' not in req:
+                for item in records:
+                    if item['name'] == req['name']:
+                        req['id'] = item['id']
+                        return req
+        if type(req) == list:
+            return [self.fix_requirement(item, records) for item in req]
+        return req
 
-        spec['name'] = re.sub('[A-Z]+-[A-Z]+', '', spec['name']).strip()
+    def fix_specialisation_name(self, s: str):
+        # clean up name
+        for keyword in ['Minor', 'minor', 'Major', 'major', 'Specialisation', 'specialisation']:
+            if s.endswith(keyword):
+                s = s.rstrip(keyword).strip()
+
+        s = re.sub('[A-Z]{3,5}-[A-Z]{3,4}', '', s).strip()
+        # s = re.sub('[A-Z]+-[A-Z]+', '', s).strip()
+
+        # remove everything in a pair of parenthesis if it only contains upper-case characters
+        # "Master of Laws (MLLM)" -> "Master of Laws"
+        s = re.sub('\([A-Z]+\)', '', s).strip()
+        return s
+
+    def fix_specialisation_req(self, spec: Specialization, records: Dict[str, Specialization]) -> Specialization:
+        spec['name'] = self.fix_specialisation_name(spec['name'])
 
         # remap specialisation type
-        spec['type'] = spec['type'].lower()
-        spec['type'] = SPEC_MAPPER[spec['type']] if spec['type'] in SPEC_MAPPER else spec['type']
+        if 'type' in spec and spec['type'] not in {'MAJ', 'MIN', 'SPC'}:
+            if spec['type'].lower() in SPEC_MAPPER:
+                spec['type'] = SPEC_MAPPER[spec['type'].lower()]
 
         # find matching specialisation
         for item in records.values():
-            if spec['name'] == item['Name'] and spec['type'] == item['SubplanType']:
+            if spec['name'].lower().replace(' ', '') == item['Name'].lower().replace(' ', '') and spec['type'] == item['SubplanType']:
+                spec['id'] = item['SubPlanCode']
+                return spec
+        for item in records.values():
+            if spec['name'].lower().replace(' ', '') == item['Name'].lower().replace(' ', ''):
                 spec['id'] = item['SubPlanCode']
                 return spec
         return spec
@@ -242,6 +257,7 @@ class SpiderProgram(SpiderANU):
         requirements = []
         while data:
             line, indent = data.pop()
+            lowercase_line = line.lower()
             doc = self.nlp(line)
             classes = [ent.text for ent in doc.ents if ent.label_ == 'CLASS']
 
@@ -258,9 +274,9 @@ class SpiderProgram(SpiderANU):
                 req['n_units'] = int(m.group(0).split()[0])
                 req['items'] = self.group_requirements(children[::-1], current_indent_level + 1)
 
-                if 'major' in line and 'minor' not in line:
+                if 'major' in lowercase_line and 'minor' not in lowercase_line:
                     req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'MAJ')
-                elif 'minor' in line:
+                elif 'minor' in lowercase_line:
                     req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'MIN')
                 elif 'specialisation' in line:
                     req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'SPC')
@@ -277,7 +293,7 @@ class SpiderProgram(SpiderANU):
                     # assume a single line only contains one class
 
                     # clean up class name
-                    if 'units' in line.lower():
+                    if 'units' in lowercase_line:
                         line = re.sub(r"\(\d+ unit[s]\)", "", line)
 
                     line = line.replace(classes[0], "").lstrip('- ').strip()
@@ -315,7 +331,7 @@ class SpiderProgram(SpiderANU):
                         requirements += course,
 
             elif current_indent_level > 0:
-                if 'major' in line.lower() or 'minor' in line.lower():
+                if 'major' in lowercase_line or 'minor' in lowercase_line or 'specialisation' in lowercase_line:
                     item = Specialization()
 
                     pattern = '[A-Z]{3,5}-[A-Z]{3,4}'
@@ -325,16 +341,17 @@ class SpiderProgram(SpiderANU):
                         item['id'] = matched_record['SubPlanCode']
                         item['name'] = matched_record['Name']
                         item['type'] = matched_record['SubplanType']
+                        requirements += self.fix_specialisation_req(item, ALL_SPECIALISATIONS),
                     else:
-                        if 'major' in line.lower():
-                            line = line.replace('major', '')
+                        if 'major' in lowercase_line:
                             item['type'] = 'MAJ'
-                        else:
-                            line = line.replace('minor', '')
+                        elif 'minor' in lowercase_line:
                             item['type'] = 'MIN'
+                        else:
+                            item['type'] = 'SPC'
 
                         item['name'] = line.strip()
-                    requirements += item,
+                        requirements += self.fix_specialisation_req(item, ALL_SPECIALISATIONS),
                 else:
                     if 'Either' in doc.vocab and any([line.replace(":", "") == 'Or' for line, padding in data]):
                         item = Requirement()
@@ -362,9 +379,9 @@ class SpiderProgram(SpiderANU):
                         requirements += item,
                     elif is_specialisation:
                         item = Specialization()
-                        item['name'] = line
+                        item['name'] = line.strip()
                         item['type'] = specialisation_type
-                        requirements += item,
+                        requirements += self.fix_specialisation_req(item, ALL_SPECIALISATIONS),
                     # else:
                     #     item = Requirement()
                     #     item['description'] = line
