@@ -1,5 +1,5 @@
 from scrapy import Field, Item
-from typing import List, Union
+from typing import List, Union, Dict, Any
 
 
 class Node(Item):
@@ -10,7 +10,7 @@ class Node(Item):
 class Course(Node):
     n_units: int = Field()
     description: str = Field()
-    requisites: str = Field()
+    requisites: Dict[str, Any] = Field()
     requisites_raw: str = Field()
     entities: List[str] = Field()
 

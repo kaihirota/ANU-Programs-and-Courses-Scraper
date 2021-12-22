@@ -7,6 +7,7 @@ import scrapy
 from scrapy.http.response.html import HtmlResponse
 
 from class_parser import parse_requisites, ALL_PROGRAMS
+from spider_program import ALL_SPECIALISATIONS
 from models import Program, Requirement, Specialization, Course
 from nlp_config import TARGET
 from spider_anu import SpiderANU
@@ -79,10 +80,19 @@ class SpiderClass(SpiderANU):
         requisites_txt = get_requisites_text(response)
 
         if requisites_txt:
-            # insert space if class code is not followed by it
+            # if class code is not followed by a space, insert space
             requisites_txt = re.sub('([A-Z]{4}[0-9]{4})([a-z]+)', '\\1 \\2', requisites_txt)
+
+            # remove everything in a pair of parenthesis if it only contains upper-case characters
+            # "Master of Laws (MLLM)" -> "Master of Laws"
+            requisites_txt = re.sub('\([A-Z]+\)', '', requisites_txt)
+
+
+
             # insert space if parenthesis and word are not space-separated
             requisites_txt = re.sub('([A-Za-z])\(', '\\1 (', requisites_txt)
+
+            requisites_txt = requisites_txt.replace('  ', ' ').strip()
 
             # apply parenthesis to Advanced / Honours, if it doesn't come after "of"
             requisites_txt = requisites_txt.replace(' Advanced ', ' (Advanced) ').replace(' Honours ', ' (Honours) ')
@@ -98,7 +108,9 @@ class SpiderClass(SpiderANU):
                 if ent.label_ in TARGET:
                     ent_str = ent.text.rstrip('(').strip()
                     if ent_str in ALL_PROGRAMS:
-                        entities +=  ALL_PROGRAMS[ent_str],
+                        entities += ALL_PROGRAMS[ent_str],
+                    elif ent_str in ALL_SPECIALISATIONS:
+                        entities += ALL_SPECIALISATIONS[entities],
                     else:
                         entities += ent_str,
             course['entities'] = entities

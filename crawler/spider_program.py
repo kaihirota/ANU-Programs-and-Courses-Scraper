@@ -2,7 +2,7 @@ from collections import Counter, OrderedDict
 import json
 import os
 import re
-from typing import List, Tuple, Union
+from typing import List, Tuple, Union, Dict
 
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString
@@ -65,7 +65,7 @@ class SpiderProgram(SpiderANU):
             p['specialisations'] = self.extract_specialisations(response)
             yield p
 
-    def fix_specialisation_req(self, spec: Specialization, records: List[Specialization]) -> Specialization:
+    def fix_specialisation_req(self, spec: Specialization, records: Dict[str, Specialization]) -> Specialization:
         # clean up name
         if spec['name'].endswith('Minor'):
             spec['name'] = spec['name'].rstrip('Minor').strip()
@@ -74,14 +74,17 @@ class SpiderProgram(SpiderANU):
         if spec['name'].endswith('Specialisation'):
             spec['name'] = spec['name'].rstrip('Specialisation').strip()
 
+        spec['name'] = re.sub('[A-Z]+-[A-Z]+', '', spec['name']).strip()
+
         # remap specialisation type
         spec['type'] = spec['type'].lower()
         spec['type'] = SPEC_MAPPER[spec['type']] if spec['type'] in SPEC_MAPPER else spec['type']
 
         # find matching specialisation
-        for item in records:
-            if spec['name'] == item['name'] and spec['type'] == item['type']:
-                return item
+        for item in records.values():
+            if spec['name'] == item['Name'] and spec['type'] == item['SubplanType']:
+                spec['id'] = item['SubPlanCode']
+                return spec
         return spec
 
     def extract_specialisations(self, response: HtmlResponse) -> List[Specialization]:
@@ -256,12 +259,11 @@ class SpiderProgram(SpiderANU):
                 req['items'] = self.group_requirements(children[::-1], current_indent_level + 1)
 
                 if 'major' in line and 'minor' not in line:
-                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'Major')
+                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'MAJ')
                 elif 'minor' in line:
-                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'Minor')
+                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'MIN')
                 elif 'specialisation' in line:
-                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True,
-                                                           'Specialization')
+                    req['items'] = self.group_requirements(children[::-1], current_indent_level + 1, True, 'SPC')
                 else:
                     # sometimes there will be lines like "6 units from completion of COMPxxxx"
                     if classes and not req['items']:
@@ -273,9 +275,16 @@ class SpiderProgram(SpiderANU):
             elif classes:
                 if len(classes) == 1:
                     # assume a single line only contains one class
+
+                    # clean up class name
                     if 'units' in line.lower():
                         line = re.sub(r"\(\d+ unit[s]\)", "", line)
+
                     line = line.replace(classes[0], "").lstrip('- ').strip()
+                    line = line.replace('Advanced', '(Advanced)')\
+                                .replace('( ', '')\
+                                .replace(' )', '').strip()
+                    line = line.replace('OR', '').strip()
 
                     course = Course()
                     course['id'] = classes[0]
@@ -309,14 +318,22 @@ class SpiderProgram(SpiderANU):
                 if 'major' in line.lower() or 'minor' in line.lower():
                     item = Specialization()
 
-                    if 'major' in line.lower():
-                        line = line.replace('major', '')
-                        item['type'] = 'major'
+                    pattern = '[A-Z]{3,5}-[A-Z]{3,4}'
+                    m = re.match(pattern, line)
+                    if m:
+                        matched_record = ALL_SPECIALISATIONS[m.group(0)]
+                        item['id'] = matched_record['SubPlanCode']
+                        item['name'] = matched_record['Name']
+                        item['type'] = matched_record['SubplanType']
                     else:
-                        line = line.replace('minor', '')
-                        item['type'] = 'minor'
+                        if 'major' in line.lower():
+                            line = line.replace('major', '')
+                            item['type'] = 'MAJ'
+                        else:
+                            line = line.replace('minor', '')
+                            item['type'] = 'MIN'
 
-                    item['name'] = line.strip()
+                        item['name'] = line.strip()
                     requirements += item,
                 else:
                     if 'Either' in doc.vocab and any([line.replace(":", "") == 'Or' for line, padding in data]):
