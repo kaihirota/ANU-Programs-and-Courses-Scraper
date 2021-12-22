@@ -1,6 +1,3 @@
-# Changelog
-- scrapers prototype completed (stage 1). It still misses / misinterprets text, but can parse things correctly in most cases.
-
 ### Tasks
 - On Hold
   - [ ] add `CLASS_NAME` to NER pipeline?
@@ -8,57 +5,29 @@
 - Scrape [ANU Programs and Courses](https://programsandcourses.anu.edu.au/) for additional data
   - Programs:
     - [ ] capture specialisations / majors / minors w.r.t. the degree program
-  - concentrations / majors / minors
   - classes
-    - `ACST4031and`
-    - Master of Laws (MLLM)
-    - [ ] fill in missing ids in program requirements (i.e. specialization, Master of xx as a requirement)
     - [ ] tag PGRD/UGRD and get more class info - co-taught, course convenor
-    - [ ] clean up description for classes
-    - [ ] add subject area (COMP, MATH, etc)
-
-Items that are formatted very differently
-
-This is a list of programs that are formatted too differently from the others.
-As such, generalizing the scraper / parser to format these items could cause incorrectly parsed requirements.
-- Bachelor of Arts (Honours)
-- Bachelor of Accounting
-- Bachelor of Advanced Computing (Honours)
-- Bachelor of Asia-Pacific Affairs
-- Bachelor of Asian Studies
+    - [ ] add subject area (COMP, MATH, etc) and course number
 
 ### Stage 1: Build dataset
 
 #### ANU search API Endpoints
-First, retrieve datasets through ANU API.
 
-```sh
-curl --request GET -H "Accept: application/json" <url> > data/from_api/output.json 
+1. First, retrieve datasets through ANU API.
 
-# Class search
-https://programsandcourses.anu.edu.au/data/CourseSearch/GetCourses\?AppliedFilter\=FilterByCourses\&Source\=\&ShowAll\=true\&PageIndex\=\&MaxPageSize\=\&PageSize\=Infinity\&SortColumn\=\&SortDirection\=\&InitailSearchRequestedFromExternalPage\=false\&SearchText\=\&SelectedYear\=2020\&Careers%5B0%5D\=\&Careers%5B1%5D\=\&Careers%5B2%5D\=\&Careers%5B3%5D\=\&Sessions%5B0%5D\=\&Sessions%5B1%5D\=\&Sessions%5B2%5D\=\&Sessions%5B3%5D\=\&Sessions%5B4%5D\=\&Sessions%5B5%5D\=\&DegreeIdentifiers%5B0%5D\=\&DegreeIdentifiers%5B1%5D\=\&DegreeIdentifiers%5B2%5D\=\&FilterByMajors\=\&FilterByMinors\=\&FilterBySpecialisations\=\&CollegeName\=\&ModeOfDelivery\=All+Modes
+    ```./fetch_data.sh```
 
-# Program search
-https://programsandcourses.anu.edu.au/data/ProgramSearch/GetProgramsUnderGraduate?AppliedFilter=FilterByPrograms&Source=&ShowAll=True&PageIndex=0&MaxPageSize=10&PageSize=Infinity&SortColumn=&SortDirection=&InitailSearchRequestedFromExternalPage=false&SearchText=&SelectedYear=2022&Careers%5B0%5D=&Careers%5B1%5D=&Careers%5B2%5D=&Careers%5B3%5D=&Sessions%5B0%5D=&Sessions%5B1%5D=&Sessions%5B2%5D=&Sessions%5B3%5D=&Sessions%5B4%5D=&Sessions%5B5%5D=&DegreeIdentifiers%5B0%5D=&DegreeIdentifiers%5B1%5D=&DegreeIdentifiers%5B2%5D=&FilterByMajors=&FilterByMinors=&FilterBySpecialisations=&CollegeName=All+Colleges&ModeOfDelivery=All+Modes
-https://programsandcourses.anu.edu.au/data/ProgramSearch/GetProgramsPostGraduate?AppliedFilter=FilterByPrograms&Source=&ShowAll=True&PageIndex=0&MaxPageSize=10&PageSize=Infinity&SortColumn=&SortDirection=&InitailSearchRequestedFromExternalPage=false&SearchText=&SelectedYear=2022&Careers%5B0%5D=&Careers%5B1%5D=&Careers%5B2%5D=&Careers%5B3%5D=&Sessions%5B0%5D=&Sessions%5B1%5D=&Sessions%5B2%5D=&Sessions%5B3%5D=&Sessions%5B4%5D=&Sessions%5B5%5D=&DegreeIdentifiers%5B0%5D=&DegreeIdentifiers%5B1%5D=&DegreeIdentifiers%5B2%5D=&FilterByMajors=&FilterByMinors=&FilterBySpecialisations=&CollegeName=All+Colleges&ModeOfDelivery=All+Modes
+2. Scrape programsandcourses website
 
-# Specializations / Majors / Minors
-https://programsandcourses.anu.edu.au/data/SpecialisationSearch/GetSpecialisations?AppliedFilter=FilterByAllSpecializations&Source=&ShowAll=True&PageIndex=0&MaxPageSize=10&PageSize=Infinity&SortColumn=&SortDirection=&InitailSearchRequestedFromExternalPage=false&SearchText=&SelectedYear=2022&Careers%5B0%5D=&Careers%5B1%5D=&Careers%5B2%5D=&Careers%5B3%5D=&Sessions%5B0%5D=&Sessions%5B1%5D=&Sessions%5B2%5D=&Sessions%5B3%5D=&Sessions%5B4%5D=&Sessions%5B5%5D=&DegreeIdentifiers%5B0%5D=&DegreeIdentifiers%5B1%5D=&DegreeIdentifiers%5B2%5D=&FilterByMajors=&FilterByMinors=&FilterBySpecialisations=&CollegeName=All+Colleges&ModeOfDelivery=All+Modes
-https://programsandcourses.anu.edu.au/data/MinorSearch/GetMinors?AppliedFilter=FilterByAllSpecializations&Source=&ShowAll=True&PageIndex=0&MaxPageSize=10&PageSize=Infinity&SortColumn=&SortDirection=&InitailSearchRequestedFromExternalPage=false&SearchText=&SelectedYear=2022&Careers%5B0%5D=&Careers%5B1%5D=&Careers%5B2%5D=&Careers%5B3%5D=&Sessions%5B0%5D=&Sessions%5B1%5D=&Sessions%5B2%5D=&Sessions%5B3%5D=&Sessions%5B4%5D=&Sessions%5B5%5D=&DegreeIdentifiers%5B0%5D=&DegreeIdentifiers%5B1%5D=&DegreeIdentifiers%5B2%5D=&FilterByMajors=&FilterByMinors=&FilterBySpecialisations=&CollegeName=All+Colleges&ModeOfDelivery=All+Modes
-https://programsandcourses.anu.edu.au/data/MajorSearch/GetMajors?AppliedFilter=FilterByAllSpecializations&Source=&ShowAll=True&PageIndex=0&MaxPageSize=10&PageSize=Infinity&SortColumn=&SortDirection=&InitailSearchRequestedFromExternalPage=false&SearchText=&SelectedYear=2022&Careers%5B0%5D=&Careers%5B1%5D=&Careers%5B2%5D=&Careers%5B3%5D=&Sessions%5B0%5D=&Sessions%5B1%5D=&Sessions%5B2%5D=&Sessions%5B3%5D=&Sessions%5B4%5D=&Sessions%5B5%5D=&DegreeIdentifiers%5B0%5D=&DegreeIdentifiers%5B1%5D=&DegreeIdentifiers%5B2%5D=&FilterByMajors=&FilterByMinors=&FilterBySpecialisations=&CollegeName=All+Colleges&ModeOfDelivery=All+Modes
-```
+    ```./run_spiders.sh```
 
-#### Scrape programsandcourses website
-Run `./run_spiders.sh` to create / update dataset.
+3. Build neo4j database
+
+    ```python graph_builder.py```
+
 
 Snippets
 ```sh
-# run spider and save output to data.json, print errors to console
-scrapy runspider crawler/spider_program.py -O data.json --loglevel=ERROR
-
-# prettify json
-cat data.json | python -m json.tool > pretty.json
-
 # get frequency of conditions
 grep "condition" data/scraped/classes.json | awk -F" " '{print $2}' | sort | uniq -c | sort -nr
 
@@ -107,10 +76,9 @@ be enrolled in the Master of Computing (Advanced)."
 ### Stage 2: Build Neo4j Graph Database; create and expose GraphQL endpoint
 #### Neo4j (in progress)
 ![img/img1.jpg](img/img1.jpg)
-![img/img1.jpg](img/img2.jpg)
-![img/img1.jpg](img/img3.jpg)
-![img/img1.jpg](img/img4.jpg)
-![img/img1.jpg](img/img5.jpg)
+![img/img2.jpg](img/img2.jpg)
+![img/img3.jpg](img/img3.jpg)
+![img/img4.jpg](img/img4.jpg)
 
 #### GraphQL
 - Apollo

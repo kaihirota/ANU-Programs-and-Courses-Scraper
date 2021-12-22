@@ -10,6 +10,9 @@ CLASSES = defaultdict(lambda: Node("class"))
 PROGRAMS = defaultdict(lambda: Node("program"))
 SPECIAL = defaultdict(lambda: Node("specialisation"))
 NOT_FOUND = []
+UNMERGED_EDGES = []
+MERGED_EDGES = []
+COUNTER = 0
 
 class Prerequisite(Relationship):
     name = 'Prerequisite'
@@ -94,11 +97,16 @@ def create_edge(edge: Relationship, doc: Dict, G: Graph, label: str = None) -> R
         labels = list(edge.start_node.labels)
         label = labels[0]
 
+    global UNMERGED_EDGES
+    global MERGED_EDGES
+    global COUNTER
     try:
         G.merge(edge, label, 'id')
+        MERGED_EDGES += (edge, label),
     except Exception as e:
-        print(e)
-        # import pdb; pdb.set_trace()
+        UNMERGED_EDGES += (edge, label),
+        COUNTER += 1
+
     return edge
 
 
@@ -249,6 +257,9 @@ def main():
         RETURN count(*)
     """))
 
+    print('Counter:', COUNTER)
+    print('Failed to merge edges:', len(UNMERGED_EDGES))
+    print('Merged edges:', len(MERGED_EDGES))
     global NOT_FOUND
     print('Not found:', len(NOT_FOUND))
     # for item in NOT_FOUND:
