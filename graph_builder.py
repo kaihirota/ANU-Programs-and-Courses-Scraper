@@ -9,7 +9,7 @@ from typing import Dict, List
 CLASSES = defaultdict(lambda: Node("class"))
 PROGRAMS = defaultdict(lambda: Node("program"))
 SPECIAL = defaultdict(lambda: Node("specialisation"))
-
+NOT_FOUND = []
 
 class Prerequisite(Relationship):
     name = 'Prerequisite'
@@ -94,7 +94,11 @@ def create_edge(edge: Relationship, doc: Dict, G: Graph, label: str = None) -> R
         labels = list(edge.start_node.labels)
         label = labels[0]
 
-    G.merge(edge, label, 'id')
+    try:
+        G.merge(edge, label, 'id')
+    except Exception as e:
+        print(e)
+        # import pdb; pdb.set_trace()
     return edge
 
 
@@ -143,6 +147,7 @@ def create_requirement_node(doc: Dict, parent_node: Node, G: Graph) -> Relations
 def create_nodes_and_edges_if_program(doc: Dict, parent_node: Node, G: Graph, op: str = 'and') -> List[Relationship]:
     """create edges if document is a program or specialisation / major / minor"""
     # create new requirement node and connect to parent
+    global NOT_FOUND
     items = []
 
     if not doc:
@@ -171,7 +176,7 @@ def create_nodes_and_edges_if_program(doc: Dict, parent_node: Node, G: Graph, op
         for child in doc:
             items.extend(create_nodes_and_edges_if_program(child, parent_node, G, op))
     else:
-        print(doc)
+        NOT_FOUND += doc,
     return items
 
 
@@ -179,3 +184,75 @@ def get_id_from_string(s: str) -> str:
     m = hashlib.md5()
     m.update(s)
     return str(int(m.hexdigest(), 16))[0:12]
+
+def main():
+    G = Graph("bolt://localhost:7687")
+
+    G.delete_all()
+
+    with open("data/scraped/classes.json") as f:
+        classes = json.load(f)
+
+    with open("data/scraped/programs.json") as f:
+        programs = json.load(f)
+
+    with open("data/scraped/specialisations.json") as f:
+        special = json.load(f)
+
+    print(f"classes: {len(classes)}, programs: {len(programs)}, special: {len(special)}")
+
+    try:
+        G.schema.create_uniqueness_constraint('class', 'id')
+        G.schema.create_uniqueness_constraint('program', 'id')
+        G.schema.create_uniqueness_constraint('specialisation', 'id')
+    except Exception as e:
+        pass
+
+    ####### create nodes #######
+    for doc in classes:
+        create_node_if_not_exists(CLASSES, doc, G, doc['id'], 'class')
+    print('classes: ', len(CLASSES))
+
+    for doc in programs:
+        create_node_if_not_exists(PROGRAMS, doc, G, doc['id'], 'program')
+    print('programs:', len(PROGRAMS))
+
+    for doc in special:
+        create_node_if_not_exists(SPECIAL, doc, G, doc['id'], 'specialisation')
+    print('specialisations:', len(SPECIAL))
+
+    print('Nodes:', G.run("""
+        MATCH (n)
+        RETURN count(*)
+    """))
+
+    ####### create edges #######
+    for doc in classes:
+        if 'requisites' in doc:
+            create_nodes_and_edges_if_class_requisite(doc['requisites'], CLASSES[doc['id']], G)
+    print('Completed merging edges for classes')
+
+    for doc in programs:
+        src_node = PROGRAMS[doc['id']]
+        for requirement in doc['requirements']:
+            create_nodes_and_edges_if_program(requirement, src_node, G)
+    print('Completed merging edges for programs')
+
+    for doc in special:
+        src_node = SPECIAL[doc['id']]
+        for requirement in doc['requirements']:
+            create_nodes_and_edges_if_program(requirement, src_node, G)
+    print('Completed merging edges for specialisations')
+
+    print('Edges', G.run("""
+        MATCH (n)-[]-()
+        RETURN count(*)
+    """))
+
+    global NOT_FOUND
+    print('Not found:', len(NOT_FOUND))
+    # for item in NOT_FOUND:
+    #     print(item)
+
+if __name__=="__main__":
+    main()
