@@ -87,8 +87,6 @@ class SpiderClass(SpiderANU):
             # "Master of Laws (MLLM)" -> "Master of Laws"
             requisites_txt = re.sub('\([A-Z]+\)', '', requisites_txt)
 
-
-
             # insert space if parenthesis and word are not space-separated
             requisites_txt = re.sub('([A-Za-z])\(', '\\1 (', requisites_txt)
 
