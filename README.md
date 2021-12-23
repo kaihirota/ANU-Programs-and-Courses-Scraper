@@ -1,13 +1,10 @@
 ### Tasks
+
 - On Hold
   - [ ] add `CLASS_NAME` to NER pipeline?
-- [x] Get JSON datasets through ANU API endpoints
-- Scrape [ANU Programs and Courses](https://programsandcourses.anu.edu.au/) for additional data
-  - Programs:
-    - [ ] capture specialisations / majors / minors w.r.t. the degree program
-  - classes
-    - [ ] tag PGRD/UGRD and get more class info - co-taught, course convenor
-    - [ ] add subject area (COMP, MATH, etc) and course number
+- ToDo
+    - classes
+      - [ ] tag PGRD/UGRD and get more class info - co-taught, course convenor
 
 ### Stage 1: Build dataset
 
@@ -23,7 +20,7 @@
 
 3. Build neo4j database
 
-    ```python graph_builder.py```
+    ```python graph_builder/graph_builder.py```
 
 
 Snippets

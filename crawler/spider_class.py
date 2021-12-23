@@ -38,11 +38,6 @@ class SpiderClass(SpiderANU):
             self.logger.info(response.url)
             return
 
-        course = Course()
-        course['id'] = response.url.split('/')[-1]
-        course['name'] = response.css("span.intro__degree-title__component::text").get().strip()
-        course['n_units'] = self.parse_unit(response)
-
         def get_intro_text(response: HtmlResponse):
             soup = BeautifulSoup(response.css("div.introduction").get(), 'html.parser')
 
@@ -74,7 +69,26 @@ class SpiderClass(SpiderANU):
                     txt += f' {item.text}'
             return txt.replace('\n', ' ').replace('\\', '').strip()
 
+        attrs = self.parse_class_info(response)
+
+        course = Course()
+        course['id'] = response.url.split('/')[-1]
+        course['subject_code'] = course['id'][:4]
+        course['course_number'] = course['id'][4:]
+        course['name'] = response.css("span.intro__degree-title__component::text").get().strip()
+        course['n_units'] = self.parse_unit(response)
+        course['subject'] = attrs['Course subject']
+        course['college'] = attrs['ANU College']
+        course['offered_by'] = attrs['Offered by']
+        course['academic_career'] = attrs['Academic career']
+        course['course_convener'] = self.parse_convener(response)
+        course['co_taught'] = self.parse_co_taught(response)
         course['description'] = get_intro_text(response)
+
+        course['offered_in'] = []
+        for val in attrs.values():
+            if type(val) == str and 'semester' in val.lower():
+                course['offered_in'] += val,
 
         requisites_txt = get_requisites_text(response)
 
@@ -109,19 +123,6 @@ class SpiderClass(SpiderANU):
 
             doc = self.nlp(requisites_txt)
             course['requisites_raw'] = doc.text
-
-            # convert entity names of programs to program id
-            entities = []
-            for ent in doc.ents:
-                if ent.label_ in TARGET:
-                    ent_str = ent.text.rstrip('(').strip()
-                    if ent_str in ALL_PROGRAMS:
-                        entities += ALL_PROGRAMS[ent_str],
-                    elif ent_str in ALL_SPECIALISATIONS:
-                        entities += ALL_SPECIALISATIONS[entities],
-                    else:
-                        entities += ent_str,
-            course['entities'] = entities
 
             requisites = parse_requisites(doc)
             if len(requisites) > 1:

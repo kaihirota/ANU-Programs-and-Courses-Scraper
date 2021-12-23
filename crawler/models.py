@@ -8,11 +8,19 @@ class Node(Item):
 
 
 class Course(Node):
+    subject_code: str = Field()
+    course_number: int = Field()
     n_units: int = Field()
     description: str = Field()
     requisites: Dict[str, Any] = Field()
     requisites_raw: str = Field()
-    entities: List[str] = Field()
+    subject: str = Field()
+    college: str = Field()
+    offered_by: str = Field()
+    academic_career: str = Field()
+    course_convener: str = Field()
+    co_taught: str = Field()
+    offered_in: List[str] = Field()
 
 
 class Specialization(Node):

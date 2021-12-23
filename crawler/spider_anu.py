@@ -29,3 +29,32 @@ class SpiderANU(ABC, CrawlSpider):
                 tokens = line.split()
                 unit = int(tokens[0])
                 return unit
+
+    def parse_class_info(self, response: HtmlResponse) -> str:
+        elems = response.xpath(
+            "//div[@class='degree-summary__codes']/ul[@class='degree-summary__codes-column']/li[@class='degree-summary__code']/span[@class='degree-summary__code-text']/text()")
+
+        elems = [elem.get().strip() for elem in elems]
+        attrs = [elem for elem in elems if elem]
+
+        elems = response.xpath(
+            "//div[@class='degree-summary__codes']/ul[@class='degree-summary__codes-column']/li[@class='degree-summary__code']/span[@class='degree-summary__code-heading']/text()")
+        elems = [elem.get().strip() for elem in elems]
+        attrs_headings = [elem for elem in elems if elem]
+
+        attr_dict = {key: val for key, val in zip(attrs_headings, attrs)}
+        return attr_dict
+
+    def parse_convener(self, response: HtmlResponse) -> str:
+        elems = response.xpath(
+            "//div[@class='degree-summary__codes']/ul[@class='degree-summary__codes-column']/li[@class='degree-summary__code']/ul/li/span/text()")
+        elems = [elem.get().strip() for elem in elems]
+        elems = [elem for elem in elems if elem]
+        return elems[0] if elems else ''
+
+    def parse_co_taught(self, response: HtmlResponse) -> str:
+        elems = response.xpath(
+            "//div[@class='degree-summary__codes']/ul[@class='degree-summary__codes-column']/li[@class='degree-summary__code']/ul/li/span/a/text()")
+        elems = [elem.get().strip() for elem in elems]
+        elems = [elem for elem in elems if elem]
+        return elems[0] if elems else []
