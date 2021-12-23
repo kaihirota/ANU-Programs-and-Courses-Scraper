@@ -3,8 +3,6 @@
 - On Hold
   - [ ] add `CLASS_NAME` to NER pipeline?
 - ToDo
-    - classes
-      - [ ] tag PGRD/UGRD and get more class info - co-taught, course convenor
 
 ### Stage 1: Build dataset
 
@@ -71,7 +69,7 @@ be enrolled in the Master of Computing (Advanced)."
 - have an approved 'Independent Study Contract' Incompatible with COMP8715 and COMP8830."
 ```
 ### Stage 2: Build Neo4j Graph Database; create and expose GraphQL endpoint
-#### Neo4j (in progress)
+#### Neo4j
 ![img/img1.jpg](img/img1.jpg)
 ![img/img2.jpg](img/img2.jpg)
 ![img/img3.jpg](img/img3.jpg)
@@ -79,7 +77,8 @@ be enrolled in the Master of Computing (Advanced)."
 ![img/img5.jpg](img/img5.jpg)
 
 #### GraphQL
-- Apollo
+
+In progress
 
 ### Stage 3: WebApp
 
