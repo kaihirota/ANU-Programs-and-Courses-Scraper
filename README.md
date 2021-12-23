@@ -9,32 +9,13 @@
 #### ANU search API Endpoints
 
 1. First, retrieve datasets through ANU API.
-
     ```./fetch_data.sh```
 
-2. Scrape programsandcourses website
+2. Scrape programsandcourses website.
+
+    The program uses Scrapy to collect data on classes, specialisations, and programs from the ANU programs and courses [website](https://programsandcourses.anu.edu.au/).
 
     ```./run_spiders.sh```
-
-3. Build neo4j database
-
-    ```python graph_builder/graph_builder.py```
-
-
-Snippets
-```sh
-# get frequency of conditions
-grep "condition" data/scraped/classes.json | awk -F" " '{print $2}' | sort | uniq -c | sort -nr
-
-  # output
-  #  56 "completed",
-  #  38 "incompatible", -> Class
-  #  36 "studying", -> Program
-  #  18 "enrolled", -> Program, Class
-  #  14 "Unknown",
-  #  5 "permission",
-  #  1 "obtained",
-```
 
 #### Semantic Parsing
 
@@ -70,6 +51,12 @@ be enrolled in the Master of Computing (Advanced)."
 ```
 ### Stage 2: Build Neo4j Graph Database; create and expose GraphQL endpoint
 #### Neo4j
+
+Build neo4j database:
+
+    ```python graph_builder/graph_builder.py```
+
+
 ![img/img1.jpg](img/img1.jpg)
 ![img/img2.jpg](img/img2.jpg)
 ![img/img3.jpg](img/img3.jpg)
