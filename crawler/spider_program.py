@@ -10,7 +10,7 @@ import scrapy
 from scrapy.http.response.html import HtmlResponse
 
 from nlp_config import SPEC_MAPPER, ALL_SPECIALISATIONS
-from models import Program, Requirement, Specialization, Course
+from models import Program, Requirement, Specialisation, Course
 from spider_anu import SpiderANU
 
 
@@ -41,18 +41,18 @@ class SpiderProgram(SpiderANU):
             p = Program()
             p['id'] = program_id
             p['name'] = program_name
-            p['n_units'] = self.parse_unit(response)
+            p['units'] = self.parse_unit(response)
             p['specialisations'] = self.extract_specialisations(response)
             p['requirements'] = self.parse_requirements(response)
             for i in range(len(p['requirements'])):
                 p['requirements'][i] = self.fix_requirement(p['requirements'][i], p['specialisations'])
             yield p
 
-    def fix_requirement(self, req: Union[Requirement, Specialization], records: List[Specialization]) -> Union[Requirement, Specialization]:
+    def fix_requirement(self, req: Union[Requirement, Specialisation], records: List[Specialisation]) -> Union[Requirement, Specialisation]:
         if 'items' in req and req['items']:
             for i in range(len(req['items'])):
                 req['items'][i] = self.fix_requirement(req['items'][i], records)
-        if type(req) == Specialization:
+        if type(req) == Specialisation:
             if 'name' in req:
                 req['name'] = self.fix_specialisation_name(req['name'])
             if 'id' not in req:
@@ -83,7 +83,7 @@ class SpiderProgram(SpiderANU):
         s = re.sub('\([A-Z]+\)', '', s).strip()
         return s
 
-    def fix_specialisation_req(self, spec: Specialization, records: Dict[str, Specialization]) -> Specialization:
+    def fix_specialisation_req(self, spec: Specialisation, records: Dict[str, Specialisation]) -> Specialisation:
         spec['name'] = self.fix_specialisation_name(spec['name'])
 
         # remap specialisation type
@@ -102,7 +102,7 @@ class SpiderProgram(SpiderANU):
                 return spec
         return spec
 
-    def extract_specialisations(self, response: HtmlResponse) -> List[Specialization]:
+    def extract_specialisations(self, response: HtmlResponse) -> List[Specialisation]:
         html = response.xpath(self.html_path).get()
         soup = BeautifulSoup(html, 'html.parser')
         spec_headings = {'Majors', 'Minors', 'Specialisations'}
@@ -129,7 +129,7 @@ class SpiderProgram(SpiderANU):
                         _, spec_type, spec_id = child.attrs['href'].split('/')
                         spec_type = spec_type
 
-                        spec = Specialization()
+                        spec = Specialisation()
                         spec['id'] = spec_id
                         spec['name'] = spec_name
                         spec['type'] = spec_type
@@ -253,7 +253,7 @@ class SpiderProgram(SpiderANU):
             current_indent_level: int = 0,
             is_specialisation: bool = False,
             specialisation_type: str = None
-    ) -> List[Union[Course, Specialization, Requirement]]:
+    ) -> List[Union[Course, Specialisation, Requirement]]:
         requirements = []
         while data:
             line, indent = data.pop()
@@ -271,7 +271,7 @@ class SpiderProgram(SpiderANU):
 
                 req = Requirement()
                 req['description'] = line
-                req['n_units'] = int(m.group(0).split()[0])
+                req['units'] = int(m.group(0).split()[0])
                 req['items'] = self.group_requirements(children[::-1], current_indent_level + 1)
 
                 if 'major' in lowercase_line and 'minor' not in lowercase_line:
@@ -332,7 +332,7 @@ class SpiderProgram(SpiderANU):
 
             elif current_indent_level > 0:
                 if 'major' in lowercase_line or 'minor' in lowercase_line or 'specialisation' in lowercase_line:
-                    item = Specialization()
+                    item = Specialisation()
 
                     pattern = '[A-Z]{3,5}-[A-Z]{3,4}'
                     m = re.match(pattern, line)
@@ -375,10 +375,10 @@ class SpiderProgram(SpiderANU):
                             children2 += data.pop(),
 
                         item['items'] += self.group_requirements(children2[::-1], current_indent_level + 1),
-                        # item['n_units']
+                        # item['units']
                         requirements += item,
                     elif is_specialisation:
-                        item = Specialization()
+                        item = Specialisation()
                         item['name'] = line.strip()
                         item['type'] = specialisation_type
                         requirements += self.fix_specialisation_req(item, ALL_SPECIALISATIONS),

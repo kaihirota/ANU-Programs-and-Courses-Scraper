@@ -7,7 +7,7 @@ import scrapy
 from scrapy.http.response.html import HtmlResponse
 
 from class_parser import parse_requisites
-from models import Program, Requirement, Specialization, Course
+from models import Program, Requirement, Specialisation, Course
 from nlp_config import TARGET, ALL_SPECIALISATIONS, ALL_PROGRAMS
 from spider_anu import SpiderANU
 
@@ -76,7 +76,7 @@ class SpiderClass(SpiderANU):
         course['subject_code'] = course['id'][:4]
         course['course_number'] = course['id'][4:]
         course['name'] = response.css("span.intro__degree-title__component::text").get().strip()
-        course['n_units'] = self.parse_unit(response)
+        course['units'] = self.parse_unit(response)
         course['subject'] = attrs['Course subject']
         course['college'] = attrs['ANU College']
         course['offered_by'] = attrs['Offered by']

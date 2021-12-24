@@ -67,8 +67,8 @@ CONDITION_MAPPING["incompatible"] = "incompatible"
 CONDITION_MAPPING["completed"] = "completed"
 CONDITION_MAPPING["studying"] = "studying"
 CONDITION_MAPPING["enrolled"] = "enrolled"
-CONDITION_MAPPING["enrol"] = "permission"
 CONDITION_MAPPING["request"] = "permission"
+CONDITION_MAPPING["permission"] = "permission"
 
 SPEC_MAPPER = {
     'major': 'MAJ',

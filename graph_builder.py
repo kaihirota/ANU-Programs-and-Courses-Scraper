@@ -6,44 +6,42 @@ from pprint import pprint
 from py2neo import Graph, Node, Relationship, Subgraph
 from typing import Dict, List
 
-CLASSES = defaultdict(lambda: Node("class"))
-PROGRAMS = defaultdict(lambda: Node("program"))
-SPECIAL = defaultdict(lambda: Node("specialisation"))
+CLASSES = defaultdict(lambda: Node('Course'))
+PROGRAMS = defaultdict(lambda: Node('Program'))
+SPECIAL = defaultdict(lambda: Node('Specialisation'))
+
 NOT_FOUND = []
 UNMERGED_EDGES = []
 MERGED_EDGES = []
 
-class Prerequisite(Relationship):
+
+class PREREQUISITE(Relationship):
     name = 'Prerequisite'
 
-
-class Incompatible(Relationship):
+class INCOMPATIBLE(Relationship):
     name = 'Incompatible'
 
-
-class Enrolled(Relationship):
+class ENROLLED(Relationship):
     name = 'Enrolled'
 
-
-class Unknown(Relationship):
+class UNKNOWN(Relationship):
     name = 'Unknown'
 
-
-class Requirement(Relationship):
-    name = 'Requirement'
-
-class Cotaught(Relationship):
+class COTAUGHT(Relationship):
     name = 'Co-taught'
+
+class REQUIREMENT(Relationship):
+    name = 'Requirement'
 
 
 CONDITION_MAPPER = {
-    'completed': Prerequisite,
-    'incompatible': Incompatible,
-    'studying': Enrolled,
-    'enrolled': Enrolled,
-    'Unknown': Unknown,
-    'permission': Unknown,
-    'obtained': Unknown
+    'completed': PREREQUISITE,
+    'incompatible': INCOMPATIBLE,
+    'studying': ENROLLED,
+    'enrolled': ENROLLED,
+    'Unknown': UNKNOWN,
+    'permission': UNKNOWN,
+    'obtained': UNKNOWN
 }
 
 
@@ -92,7 +90,7 @@ def create_edge(edge: Relationship, doc: Dict, G: Graph, label: str = None) -> R
         if 'negation' in doc:
             edge['negation'] = doc['negation']
 
-    if label == 'requirement':
+    if label == 'Requirement':
         labels = list(edge.end_node.labels)
         label = labels[0]
 
@@ -125,12 +123,12 @@ def create_nodes_and_edges_if_class_requisite(
             EDGE_FACTORY = CONDITION_MAPPER[doc['condition']]
             if 'programs' in doc:
                 for program_name in doc['programs']:
-                    dest_node = create_node_if_not_exists(PROGRAMS, doc, G, program_name, 'program')
-                    items += create_edge(EDGE_FACTORY(parent_node, dest_node), doc, G, 'program'),
+                    dest_node = create_node_if_not_exists(PROGRAMS, doc, G, program_name, 'Program')
+                    items += create_edge(EDGE_FACTORY(parent_node, dest_node), doc, G, 'Program'),
             if 'classes' in doc:
                 for class_name in doc['classes']:
-                    dest_node = create_node_if_not_exists(CLASSES, doc, G, class_name, 'class')
-                    items += create_edge(EDGE_FACTORY(parent_node, dest_node), doc, G, 'class'),
+                    dest_node = create_node_if_not_exists(CLASSES, doc, G, class_name, 'Course')
+                    items += create_edge(EDGE_FACTORY(parent_node, dest_node), doc, G, 'Course'),
             # DISREGARD class requisites that are not referring to classes
             # if not doc['programs'] and not doc['classes'] and doc['description']:
             #     items += create_requirement_node(doc, parent_node, G),
@@ -138,19 +136,19 @@ def create_nodes_and_edges_if_class_requisite(
 
 
 def create_requirement_node(doc: Dict, parent_node: Node, G: Graph) -> Relationship:
-    req_node = Node("requirement")
+    req_node = Node("Requirement")
     doc['id'] = get_id_from_string(doc['description'].encode('utf-8'))
     req_node = update_node(req_node, doc)
     G.create(req_node)
 
     labels = list(parent_node.labels)
-    if 'program' in labels:
-        label = 'program'
-    elif 'specialisation' in labels:
-        label = 'specialisation'
+    if 'Program' in labels:
+        label = 'Program'
+    elif 'Specialisation' in labels:
+        label = 'Specialisation'
     else:
-        label = 'class'
-    return create_edge(Requirement(parent_node, req_node), doc, G, label)
+        label = 'Course'
+    return create_edge(REQUIREMENT(parent_node, req_node), doc, G, label)
 
 
 def create_nodes_and_edges_if_program(doc: Dict, parent_node: Node, G: Graph, op: str = 'and') -> List[Relationship]:
@@ -172,15 +170,15 @@ def create_nodes_and_edges_if_program(doc: Dict, parent_node: Node, G: Graph, op
                 items.extend(create_nodes_and_edges_if_program(child, edge.end_node, G, op))
     elif 'id' in doc and doc['id']:
         if doc['id'] in PROGRAMS:
-            label = 'program'
+            label = 'Program'
             dest_node = create_node_if_not_exists(PROGRAMS, doc, G, doc['id'], label)
         elif doc['id'] in SPECIAL:
-            label = 'specialisation'
+            label = 'Specialisation'
             dest_node = create_node_if_not_exists(SPECIAL, doc, G, doc['id'], label)
         else:
-            label = 'class'
+            label = 'Course'
             dest_node = create_node_if_not_exists(CLASSES, doc, G, doc['id'], label)
-        items += create_edge(Requirement(parent_node, dest_node), doc, G, label),
+        items += create_edge(REQUIREMENT(parent_node, dest_node), doc, G, label),
     elif type(doc) == list:
         for child in doc:
             items.extend(create_nodes_and_edges_if_program(child, parent_node, G, op))
@@ -193,6 +191,7 @@ def get_id_from_string(s: str) -> str:
     m = hashlib.md5()
     m.update(s)
     return str(int(m.hexdigest(), 16))[0:12]
+
 
 def main():
     G = Graph("bolt://localhost:7687", auth=('neo4j', 'letmein'))
@@ -211,23 +210,23 @@ def main():
     print(f"classes: {len(classes)}, programs: {len(programs)}, special: {len(special)}")
 
     try:
-        G.schema.create_uniqueness_constraint('class', 'id')
-        G.schema.create_uniqueness_constraint('program', 'id')
-        G.schema.create_uniqueness_constraint('specialisation', 'id')
+        G.schema.create_uniqueness_constraint('Course', 'id')
+        G.schema.create_uniqueness_constraint('Program', 'id')
+        G.schema.create_uniqueness_constraint('Specialisation', 'id')
     except Exception as e:
         pass
 
     ####### create nodes #######
     for doc in classes:
-        create_node_if_not_exists(CLASSES, doc, G, doc['id'], 'class')
+        create_node_if_not_exists(CLASSES, doc, G, doc['id'], 'Course')
     print('classes: ', len(CLASSES))
 
     for doc in programs:
-        create_node_if_not_exists(PROGRAMS, doc, G, doc['id'], 'program')
+        create_node_if_not_exists(PROGRAMS, doc, G, doc['id'], 'Program')
     print('programs:', len(PROGRAMS))
 
     for doc in special:
-        create_node_if_not_exists(SPECIAL, doc, G, doc['id'], 'specialisation')
+        create_node_if_not_exists(SPECIAL, doc, G, doc['id'], 'Specialisation')
     print('specialisations:', len(SPECIAL))
 
     print('Nodes:', G.run("""
@@ -272,5 +271,6 @@ def main():
     print('Merged edges:', len(MERGED_EDGES))
     print('Not found:', len(NOT_FOUND))
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

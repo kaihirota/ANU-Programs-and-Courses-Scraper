@@ -4,7 +4,7 @@ import json
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 
-from models import SpecializationPage
+from models import SpecialisationPage
 from spider_program import SpiderProgram
 
 
@@ -33,10 +33,10 @@ class SpiderSpecialisation(SpiderProgram):
         program_name = response.css('span.intro__degree-title__component::text').get()
         program_name = self.converter.handle(program_name).replace("\n", "")
 
-        item = SpecializationPage()
+        item = SpecialisationPage()
         item['id'] = program_id
         item['name'] = program_name
         item['type'] = specialisation_type
-        item['n_units'] = self.parse_unit(response)
+        item['units'] = self.parse_unit(response)
         item['requirements'] = self.parse_requirements(response)
         yield item
