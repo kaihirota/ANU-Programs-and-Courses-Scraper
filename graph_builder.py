@@ -236,8 +236,8 @@ def main():
 
     ####### create edges #######
     for doc in classes:
-        if 'requisites' in doc:
-            create_nodes_and_edges_if_class_requisite(doc['requisites'], CLASSES[doc['id']], G)
+        if 'prerequisites' in doc:
+            create_nodes_and_edges_if_class_requisite(doc['prerequisites'], CLASSES[doc['id']], G)
         # if 'co_taught' in doc:
         #     if type(doc['co_taught']) == list:
         #         for item in doc['co_taught']:

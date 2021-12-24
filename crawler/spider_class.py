@@ -126,13 +126,13 @@ class SpiderClass(SpiderANU):
 
             requisites = parse_requisites(doc)
             if len(requisites) > 1:
-                course['requisites'] = {
+                course['prerequisites'] = {
                     "description": "",
                     "operator": {
                         "AND": requisites
                     }
                 }
             else:
-                course['requisites'] = requisites[0]
+                course['prerequisites'] = requisites[0]
 
         return course
