@@ -1,6 +1,6 @@
-### Stage 1: Build dataset
+## Stage 1: Build dataset
 
-#### ANU search API Endpoints
+### ANU search API Endpoints
 
 1. First, retrieve datasets through ANU API.
     ```./fetch_data.sh```
@@ -43,13 +43,13 @@ be enrolled in the Master of Computing (Advanced)."
 - find a project/supervisor; and 
 - have an approved 'Independent Study Contract' Incompatible with COMP8715 and COMP8830."
 ```
-### Stage 2: Build Neo4j Graph Database; create and expose GraphQL endpoint
+
+## Stage 2: Build Neo4j Graph Database
 #### Neo4j
 
-Build neo4j database:
+Edit [`config_empty.py`](config_empty.py) and rename it as `config.py`.
 
-    ```python graph_builder/graph_builder.py```
-
+To build neo4j database, run `python graph_builder/graph_builder.py`
 
 ![img/img1.jpg](img/img1.jpg)
 ![img/img2.jpg](img/img2.jpg)
@@ -57,12 +57,11 @@ Build neo4j database:
 ![img/img4.jpg](img/img4.jpg)
 ![img/img5.jpg](img/img5.jpg)
 
-#### GraphQL
+## Stage 3: Graph API Endpoint & GraphQL Playground
+[ANU Programs and Courses Graph API (Unofficial)](https://github.com/from81/ANU-GraphAPI)
 
-In progress
-
-### Stage 3: WebApp
-
+## Stage 4: WebApp
+[ANU Programs and Courses Graph Explorer](https://github.com/from81/ANU-Programs-and-Courses-Graph-Explorer)
 
 
 

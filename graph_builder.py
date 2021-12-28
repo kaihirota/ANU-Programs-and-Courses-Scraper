@@ -6,6 +6,8 @@ from pprint import pprint
 from py2neo import Graph, Node, Relationship, Subgraph
 from typing import Dict, List
 
+from config import NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
+
 CLASSES = defaultdict(lambda: Node('Course'))
 PROGRAMS = defaultdict(lambda: Node('Program'))
 SPECIAL = defaultdict(lambda: Node('Specialisation'))
@@ -194,7 +196,7 @@ def get_id_from_string(s: str) -> str:
 
 
 def main():
-    G = Graph("bolt://localhost:7687", auth=('neo4j', 'letmein'))
+    G = Graph(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
     G.delete_all()
 
