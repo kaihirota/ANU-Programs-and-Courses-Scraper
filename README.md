@@ -1,9 +1,3 @@
-### Tasks
-
-- On Hold
-  - [ ] add `CLASS_NAME` to NER pipeline?
-- ToDo
-
 ### Stage 1: Build dataset
 
 #### ANU search API Endpoints
