@@ -1,0 +1,1350 @@
+{
+    "TotalCount": 169,
+    "Items": [
+        {
+            "Name": "ANU Leadership and Research",
+            "Units": 24.0,
+            "SubPlanCode": "ANLR-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Abnormal Psychology",
+            "Units": 24.0,
+            "SubPlanCode": "ABPS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Accounting",
+            "Units": 24.0,
+            "SubPlanCode": "AACC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Ancient Greek",
+            "Units": 24.0,
+            "SubPlanCode": "AAGR-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Arabic",
+            "Units": 24.0,
+            "SubPlanCode": "AARB-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Chinese Language",
+            "Units": 24.0,
+            "SubPlanCode": "ACHN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced English Language",
+            "Units": 24.0,
+            "SubPlanCode": "AELG-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Environmental Archaeology",
+            "Units": 24.0,
+            "SubPlanCode": "EARC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced French Studies",
+            "Units": 24.0,
+            "SubPlanCode": "AFRE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced German Studies",
+            "Units": 24.0,
+            "SubPlanCode": "AGER-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Hispanic Culture ",
+            "Units": 24.0,
+            "SubPlanCode": "ADHC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Hispanic Linguistics ",
+            "Units": 24.0,
+            "SubPlanCode": "ADHL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Italian Studies",
+            "Units": 24.0,
+            "SubPlanCode": "AITA-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Japanese Language",
+            "Units": 24.0,
+            "SubPlanCode": "AJPN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Korean Language",
+            "Units": 24.0,
+            "SubPlanCode": "AKOR-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Latin",
+            "Units": 24.0,
+            "SubPlanCode": "ALAT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Persian",
+            "Units": 24.0,
+            "SubPlanCode": "APRS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Sanskrit Language",
+            "Units": 24.0,
+            "SubPlanCode": "ASKT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Spanish Studies",
+            "Units": 24.0,
+            "SubPlanCode": "ASPA-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Studies",
+            "Units": 24.0,
+            "SubPlanCode": "ADST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "American Studies",
+            "Units": 24.0,
+            "SubPlanCode": "AMER-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Ancient Greek",
+            "Units": 24.0,
+            "SubPlanCode": "AGRK-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Ancient History",
+            "Units": 24.0,
+            "SubPlanCode": "ANCH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Anthropology",
+            "Units": 24.0,
+            "SubPlanCode": "ANTH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Applied Linguistics",
+            "Units": 24.0,
+            "SubPlanCode": "APLN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Applied Statistics",
+            "Units": 24.0,
+            "SubPlanCode": "APST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Arabic",
+            "Units": 24.0,
+            "SubPlanCode": "ARAB-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Archaeology",
+            "Units": 24.0,
+            "SubPlanCode": "ARCH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Archaeology of Aboriginal Australia in its Regional and Cultural Context",
+            "Units": 24.0,
+            "SubPlanCode": "AARC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Art History and Theory",
+            "Units": 24.0,
+            "SubPlanCode": "AHIT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asia-Pacific International Relations",
+            "Units": 24.0,
+            "SubPlanCode": "APIR-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asia-Pacific Politics",
+            "Units": 24.0,
+            "SubPlanCode": "ASPP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asia-Pacific Security Studies",
+            "Units": 24.0,
+            "SubPlanCode": "SECU-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian Art History",
+            "Units": 24.0,
+            "SubPlanCode": "ASAH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian History",
+            "Units": 24.0,
+            "SubPlanCode": "AHIST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian Studies ",
+            "Units": 24.0,
+            "SubPlanCode": "ASIA-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian and Pacific Anthropology",
+            "Units": 24.0,
+            "SubPlanCode": "APAN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian and Pacific Archaeology",
+            "Units": 24.0,
+            "SubPlanCode": "APAE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian and Pacific Culture, Media and Gender",
+            "Units": 24.0,
+            "SubPlanCode": "ACMG-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian and Pacific Linguistics",
+            "Units": 24.0,
+            "SubPlanCode": "APLI-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Asian and Pacific Literature and Film",
+            "Units": 24.0,
+            "SubPlanCode": "APLF-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Australian Indigenous Studies ",
+            "Units": 24.0,
+            "SubPlanCode": "AUIS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Australian Politics",
+            "Units": 24.0,
+            "SubPlanCode": "APOL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biodiversity Conservation and Management",
+            "Units": 24.0,
+            "SubPlanCode": "BCAM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biological Anthropology",
+            "Units": 24.0,
+            "SubPlanCode": "BIAN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biological Neuropsychology",
+            "Units": 24.0,
+            "SubPlanCode": "BION-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biology",
+            "Units": 24.0,
+            "SubPlanCode": "BIOL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Burmese Language",
+            "Units": 24.0,
+            "SubPlanCode": "BURM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Business Information Systems",
+            "Units": 24.0,
+            "SubPlanCode": "BISM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Business Law and Professional Ethics",
+            "Units": 24.0,
+            "SubPlanCode": "LAWE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Business Psychology",
+            "Units": 24.0,
+            "SubPlanCode": "BPSY-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Business and Economics Essentials",
+            "Units": 24.0,
+            "SubPlanCode": "BECE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Chemistry",
+            "Units": 24.0,
+            "SubPlanCode": "CHEM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Chinese Language",
+            "Units": 24.0,
+            "SubPlanCode": "CHIN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Chinese Studies",
+            "Units": 24.0,
+            "SubPlanCode": "CHST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Classical Chinese",
+            "Units": 24.0,
+            "SubPlanCode": "CLCH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": ""
+        },
+        {
+            "Name": "Climate Science and Policy",
+            "Units": 24.0,
+            "SubPlanCode": "CSAP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Cognitive Psychology",
+            "Units": 24.0,
+            "SubPlanCode": "COPS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Composition, Arranging and Sound Design",
+            "Units": 24.0,
+            "SubPlanCode": "CASD-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computational Foundations",
+            "Units": 24.0,
+            "SubPlanCode": "COMPF-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computer Science",
+            "Units": 24.0,
+            "SubPlanCode": "CSCI-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computer Science Foundations",
+            "Units": 24.0,
+            "SubPlanCode": "CSFN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computing & Mathematical Foundations",
+            "Units": 24.0,
+            "SubPlanCode": "COMF-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Contemporary Europe",
+            "Units": 24.0,
+            "SubPlanCode": "EURO-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Corporate Sustainability",
+            "Units": 24.0,
+            "SubPlanCode": "CORP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Criminology",
+            "Units": 24.0,
+            "SubPlanCode": "CRIM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Criminology Minor",
+            "Units": 24.0,
+            "SubPlanCode": "CRIM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Demography",
+            "Units": 24.0,
+            "SubPlanCode": "DEMO-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Design",
+            "Units": 24.0,
+            "SubPlanCode": "DESA-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Development Studies",
+            "Units": 24.0,
+            "SubPlanCode": "DEST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Developmental Psychology",
+            "Units": 24.0,
+            "SubPlanCode": "DEPS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Digital Humanities",
+            "Units": 24.0,
+            "SubPlanCode": "DIHU-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Earth and Marine Sciences",
+            "Units": 24.0,
+            "SubPlanCode": "EMSC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Econometrics",
+            "Units": 24.0,
+            "SubPlanCode": "EMET-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Economic History",
+            "Units": 24.0,
+            "SubPlanCode": "ECHI-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Economic Studies",
+            "Units": 24.0,
+            "SubPlanCode": "ECST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Electrical Engineering Foundations",
+            "Units": 24.0,
+            "SubPlanCode": "ELEF-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Electronic and Communication Systems",
+            "Units": 24.0,
+            "SubPlanCode": "ELCO-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Engineering Science",
+            "Units": 24.0,
+            "SubPlanCode": "ENGS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "English",
+            "Units": 24.0,
+            "SubPlanCode": "ENGL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Environmental Policy",
+            "Units": 24.0,
+            "SubPlanCode": "ENVP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Environmental Studies",
+            "Units": 24.0,
+            "SubPlanCode": "ENST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Finance",
+            "Units": 24.0,
+            "SubPlanCode": "FINM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Forensic Anthropology",
+            "Units": 24.0,
+            "SubPlanCode": "FORA-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Forensic Linguistics",
+            "Units": 24.0,
+            "SubPlanCode": "FOLI-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Forest Science and Policy",
+            "Units": 24.0,
+            "SubPlanCode": "FSAP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Foundational Science",
+            "Units": 24.0,
+            "SubPlanCode": "FSCI-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "French Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "FREN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Gender and Sexuality",
+            "Units": 24.0,
+            "SubPlanCode": "GESX-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Geography",
+            "Units": 24.0,
+            "SubPlanCode": "GEOG-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "German Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "GERM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Global Security",
+            "Units": 24.0,
+            "SubPlanCode": "GSEC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Health, Medicine and the Body",
+            "Units": 24.0,
+            "SubPlanCode": "HMAB-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Heritage and Museum Studies",
+            "Units": 24.0,
+            "SubPlanCode": "HAMS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Hindi Language",
+            "Units": 24.0,
+            "SubPlanCode": "HIND-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Historical International Security",
+            "Units": 24.0,
+            "SubPlanCode": "HINS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "History",
+            "Units": 24.0,
+            "SubPlanCode": "HIST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Human Ecology",
+            "Units": 24.0,
+            "SubPlanCode": "HECL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Human Evolutionary Biology",
+            "Units": 24.0,
+            "SubPlanCode": "HUEB-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Human Rights ",
+            "Units": 24.0,
+            "SubPlanCode": "HMRT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Humanitarian Engineering",
+            "Units": 24.0,
+            "SubPlanCode": "HUEN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "IT in New Media",
+            "Units": 24.0,
+            "SubPlanCode": "NEWM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "India Studies",
+            "Units": 24.0,
+            "SubPlanCode": "INDS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Indonesian Language",
+            "Units": 24.0,
+            "SubPlanCode": "INDN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Indonesian Studies",
+            "Units": 24.0,
+            "SubPlanCode": "INST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Innovation and Professional Practice",
+            "Units": 24.0,
+            "SubPlanCode": "INPP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": ""
+        },
+        {
+            "Name": "Interdisciplinary Science",
+            "Units": 24.0,
+            "SubPlanCode": "INSC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "International Business",
+            "Units": 24.0,
+            "SubPlanCode": "INTB-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "International Communication",
+            "Units": 24.0,
+            "SubPlanCode": "ICOM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "International Relations",
+            "Units": 24.0,
+            "SubPlanCode": "IREL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Introductory Accounting",
+            "Units": 24.0,
+            "SubPlanCode": "ACCT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Italian Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "ITAL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Japanese",
+            "Units": 24.0,
+            "SubPlanCode": "JPNS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Japanese Language",
+            "Units": 24.0,
+            "SubPlanCode": "JPNS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Japanese Linguistics",
+            "Units": 24.0,
+            "SubPlanCode": "JPLN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Japanese Studies",
+            "Units": 24.0,
+            "SubPlanCode": "JPST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Korean",
+            "Units": 24.0,
+            "SubPlanCode": "KORE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Korean Language",
+            "Units": 24.0,
+            "SubPlanCode": "KORE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Korean Studies",
+            "Units": 24.0,
+            "SubPlanCode": "KORS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Latin",
+            "Units": 24.0,
+            "SubPlanCode": "LATN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Latin American Studies",
+            "Units": 24.0,
+            "SubPlanCode": "LAMS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Linguistics",
+            "Units": 24.0,
+            "SubPlanCode": "LING-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Literary Chinese",
+            "Units": 24.0,
+            "SubPlanCode": "LCHN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Management",
+            "Units": 24.0,
+            "SubPlanCode": "MGMT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Market Research",
+            "Units": 24.0,
+            "SubPlanCode": "MKRS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Marketing",
+            "Units": 24.0,
+            "SubPlanCode": "MKTG-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Mathematics",
+            "Units": 24.0,
+            "SubPlanCode": "MATH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Mechatronic Systems",
+            "Units": 24.0,
+            "SubPlanCode": "MTSY-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Middle Eastern and Central Asian Studies",
+            "Units": 24.0,
+            "SubPlanCode": "MECA-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Mongolian Language",
+            "Units": 24.0,
+            "SubPlanCode": "MNGL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Music",
+            "Units": 24.0,
+            "SubPlanCode": "MUSC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Music Technology",
+            "Units": 24.0,
+            "SubPlanCode": "MSTC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Musicology ",
+            "Units": 24.0,
+            "SubPlanCode": "MUSY-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Northeast Asian Studies",
+            "Units": 24.0,
+            "SubPlanCode": "NAST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Pacific Studies",
+            "Units": 24.0,
+            "SubPlanCode": "PAST-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Peace and Conflict Studies",
+            "Units": 24.0,
+            "SubPlanCode": "PECO-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Performance",
+            "Units": 24.0,
+            "SubPlanCode": "PERF-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Persian",
+            "Units": 24.0,
+            "SubPlanCode": "PERS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Philosophy",
+            "Units": 24.0,
+            "SubPlanCode": "PHIL-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Philosophy and Science",
+            "Units": 24.0,
+            "SubPlanCode": "PHSC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Photonic Systems",
+            "Units": 24.0,
+            "SubPlanCode": "PHOT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": ""
+        },
+        {
+            "Name": "Physics",
+            "Units": 24.0,
+            "SubPlanCode": "PHYS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Political Science",
+            "Units": 24.0,
+            "SubPlanCode": "POLS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Political Theory",
+            "Units": 24.0,
+            "SubPlanCode": "POLT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": ""
+        },
+        {
+            "Name": "Popular Music",
+            "Units": 24.0,
+            "SubPlanCode": "POMU-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Project Management",
+            "Units": 24.0,
+            "SubPlanCode": "PJMT-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Renewable Energy Systems",
+            "Units": 24.0,
+            "SubPlanCode": "RENE-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Russian",
+            "Units": 24.0,
+            "SubPlanCode": "RUSS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Sanskrit Language",
+            "Units": 24.0,
+            "SubPlanCode": "SANS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Science Communication",
+            "Units": 24.0,
+            "SubPlanCode": "SCOM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Screen Studies",
+            "Units": 24.0,
+            "SubPlanCode": "SCRN-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Social Psychology",
+            "Units": 24.0,
+            "SubPlanCode": "SOPS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Social Research Methods",
+            "Units": 24.0,
+            "SubPlanCode": "SORM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Sociology",
+            "Units": 24.0,
+            "SubPlanCode": "SOCY-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Soil and Land Management",
+            "Units": 24.0,
+            "SubPlanCode": "LAND-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Southeast Asian Studies",
+            "Units": 24.0,
+            "SubPlanCode": "SEAS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Spanish",
+            "Units": 24.0,
+            "SubPlanCode": "SPAH-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Strategy, Behaviour and Economics",
+            "Units": 24.0,
+            "SubPlanCode": "SBEC-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Sustainable Development",
+            "Units": 24.0,
+            "SubPlanCode": "SUSD-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Sustainable Systems",
+            "Units": 24.0,
+            "SubPlanCode": "SUSY-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Technology, Networks and Society",
+            "Units": 24.0,
+            "SubPlanCode": "TNSO-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Tetum Language",
+            "Units": 24.0,
+            "SubPlanCode": "TETM-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Thai Language",
+            "Units": 24.0,
+            "SubPlanCode": "THAI-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Tok Pisin Language",
+            "Units": 24.0,
+            "SubPlanCode": "TOKP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Vietnamese Language",
+            "Units": 24.0,
+            "SubPlanCode": "VIET-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Visual Arts Practice",
+            "Units": 24.0,
+            "SubPlanCode": "VAPR-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "War Studies",
+            "Units": 24.0,
+            "SubPlanCode": "WARS-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Water Science and Policy",
+            "Units": 24.0,
+            "SubPlanCode": "WSAP-MIN",
+            "SubplanType": "MIN",
+            "Year": 2021,
+            "Career": "Undergraduate"
+        }
+    ],
+    "Suggestion": null
+}

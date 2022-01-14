@@ -1,0 +1,1590 @@
+{
+    "TotalCount": 202,
+    "Items": [
+        {
+            "Name": "Accounting",
+            "Units": 24.0,
+            "SubPlanCode": "ACCT-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Accounting Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ACCT-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Actuarial Statistics",
+            "Units": 24.0,
+            "SubPlanCode": "ASTA-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Actuarial Studies",
+            "Units": 24.0,
+            "SubPlanCode": "ACST-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Advanced Chemistry",
+            "Units": 24.0,
+            "SubPlanCode": "CHEM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Mathematics",
+            "Units": 24.0,
+            "SubPlanCode": "ADMA-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Physics",
+            "Units": 24.0,
+            "SubPlanCode": "ADPH-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Advanced Quantitative Biology and Bioinformatics",
+            "Units": 24.0,
+            "SubPlanCode": "AQBI-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Ancient Greek Lang & Culture",
+            "Units": 24.0,
+            "SubPlanCode": "GREK-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Anthropology  Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ANTH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Anthropology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ANTH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Applied Economics Honours",
+            "Units": 48.0,
+            "SubPlanCode": "APEC-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Applied Finance",
+            "Units": 24.0,
+            "SubPlanCode": "APFN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Arabic Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "ARAB-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Archaeology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ARCH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Art History and Theory Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ARTH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Art of War",
+            "Units": 24.0,
+            "SubPlanCode": "AWAR-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Artificial Intelligence",
+            "Units": 24.0,
+            "SubPlanCode": "ARIN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Artificial Intelligence",
+            "Units": 24.0,
+            "SubPlanCode": "ARTIF-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Asia-Pacific Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ASPA-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Astronomy and Astrophysics",
+            "Units": 24.0,
+            "SubPlanCode": "ASAP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Astronomy and Astrophysics Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ASTR-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Australia and the use of Force",
+            "Units": 24.0,
+            "SubPlanCode": "AFOR-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Australian Defence Policy",
+            "Units": 24.0,
+            "SubPlanCode": "ADEF-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Australian Indigenous Languages and Society",
+            "Units": 24.0,
+            "SubPlanCode": "INLS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Australian Indigenous Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "AINS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Bioarchaeology and Forensic Anthropology",
+            "Units": 24.0,
+            "SubPlanCode": "BAFA-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Biochemistry",
+            "Units": 24.0,
+            "SubPlanCode": "BCHM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biodiversity Conservation and Management",
+            "Units": 24.0,
+            "SubPlanCode": "BICM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Biological Anthropology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "BIAN-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "BIOL-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Biomedical Science",
+            "Units": 24.0,
+            "SubPlanCode": "BMSC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Burmese Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "BURM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Business Essentials",
+            "Units": 24.0,
+            "SubPlanCode": "BSNE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Business Information Systems Honours",
+            "Units": 48.0,
+            "SubPlanCode": "BISS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Business Information systems",
+            "Units": 24.0,
+            "SubPlanCode": "BISY-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Chemistry Honours",
+            "Units": 48.0,
+            "SubPlanCode": "CHEM-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Chinese Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "CHIN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Classical Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "CLAS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Climate Science and Policy",
+            "Units": 24.0,
+            "SubPlanCode": "CLSP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Composition Honours",
+            "Units": 48.0,
+            "SubPlanCode": "CPSN-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Composition for Film and Video Games Honours",
+            "Units": 48.0,
+            "SubPlanCode": "CFVG-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computational Foundations",
+            "Units": 24.0,
+            "SubPlanCode": "COMP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Computer Science Honours",
+            "Units": 48.0,
+            "SubPlanCode": "COMP-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computer Systems",
+            "Units": 24.0,
+            "SubPlanCode": "CMSY-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Computer Systems",
+            "Units": 24.0,
+            "SubPlanCode": "COMS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Computing Essentials",
+            "Units": 24.0,
+            "SubPlanCode": "CMPE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Conflict and Development",
+            "Units": 24.0,
+            "SubPlanCode": "CODE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Contemporary Europe Honours",
+            "Units": 48.0,
+            "SubPlanCode": "EURO-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Corporate and Commercial Law",
+            "Units": 24.0,
+            "SubPlanCode": "COCOM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Criminology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "CRIM-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Cultural Heritage Management",
+            "Units": 24.0,
+            "SubPlanCode": "CEHE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Cultural and Environmental Heritage ",
+            "Units": 24.0,
+            "SubPlanCode": "CEHE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Data Science",
+            "Units": 24.0,
+            "SubPlanCode": "DTSC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Development Policy",
+            "Units": 24.0,
+            "SubPlanCode": "DVPL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Development Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "DEST-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Digital Humanities Honours",
+            "Units": 48.0,
+            "SubPlanCode": "DIGH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Disaster Studies",
+            "Units": 24.0,
+            "SubPlanCode": "DISS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Earth Physics",
+            "Units": 24.0,
+            "SubPlanCode": "EARP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Earth and Marine Science Honours",
+            "Units": 48.0,
+            "SubPlanCode": "EMSC-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Economic Policy",
+            "Units": 24.0,
+            "SubPlanCode": "ECPL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Economics Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ECON-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Economies of Asia and the Pacific",
+            "Units": 24.0,
+            "SubPlanCode": "ECAP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "English Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ENGL-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "English Language",
+            "Units": 24.0,
+            "SubPlanCode": "ENGL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Entrepreneurship and Innovation",
+            "Units": 24.0,
+            "SubPlanCode": "ENIN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Environment Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ENVI-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Environment and Public Policy",
+            "Units": 24.0,
+            "SubPlanCode": "ENPP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Environmental Archaeology and Climate Change",
+            "Units": 24.0,
+            "SubPlanCode": "EACC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Environmental Geology",
+            "Units": 24.0,
+            "SubPlanCode": "ENGE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Environmental Policy",
+            "Units": 24.0,
+            "SubPlanCode": "ENVP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Environmental Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "ENVS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Environmental Studies and Human Ecology",
+            "Units": 24.0,
+            "SubPlanCode": "ESHE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Evolution and Ecology",
+            "Units": 24.0,
+            "SubPlanCode": "EVEC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Finance",
+            "Units": 24.0,
+            "SubPlanCode": "FINM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Finance Honours",
+            "Units": 48.0,
+            "SubPlanCode": "FINM-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Foreign Policy Analysis",
+            "Units": 24.0,
+            "SubPlanCode": "IRFP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Foreign and Defence Policy",
+            "Units": 24.0,
+            "SubPlanCode": "FODF-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "French Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "FREN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Gender and Development",
+            "Units": 24.0,
+            "SubPlanCode": "GEDE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Gender, Sexuality and Culture Honours",
+            "Units": 48.0,
+            "SubPlanCode": "GSXC-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Genetics",
+            "Units": 24.0,
+            "SubPlanCode": "GENE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Geochemistry and Petrology",
+            "Units": 24.0,
+            "SubPlanCode": "GOPT-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Geography",
+            "Units": 24.0,
+            "SubPlanCode": "GEOG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Geophysics and Geology",
+            "Units": 24.0,
+            "SubPlanCode": "GEGE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "German Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "GERM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Global Development Policy",
+            "Units": 24.0,
+            "SubPlanCode": "GLDV-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Health Policy",
+            "Units": 24.0,
+            "SubPlanCode": "HLPL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Hindi Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "HIND-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "History Honours",
+            "Units": 48.0,
+            "SubPlanCode": "HIST-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Human Centre Design and  Software",
+            "Units": 24.0,
+            "SubPlanCode": "HCSD-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Human Centred Design and Software Development",
+            "Units": 24.0,
+            "SubPlanCode": "HCSD-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Human Evolution",
+            "Units": 24.0,
+            "SubPlanCode": "HUEV-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Human Security Law",
+            "Units": 24.0,
+            "SubPlanCode": "HUST-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Humanitarian Action",
+            "Units": 24.0,
+            "SubPlanCode": "HUAC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Indigenous Policy and Development",
+            "Units": 24.0,
+            "SubPlanCode": "IPDV-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Indonesian Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "INDN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Information and Human Centred Computing",
+            "Units": 24.0,
+            "SubPlanCode": "IHCC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Intangible Cultural Heritage",
+            "Units": 24.0,
+            "SubPlanCode": "INHC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Integrity and Anti-Corruption",
+            "Units": 24.0,
+            "SubPlanCode": "INAC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Intelligent Systems",
+            "Units": 24.0,
+            "SubPlanCode": "INSY-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "International Business",
+            "Units": 24.0,
+            "SubPlanCode": "BUSI-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "International Business Honours",
+            "Units": 48.0,
+            "SubPlanCode": "INBS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "International Governance",
+            "Units": 24.0,
+            "SubPlanCode": "IRIG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "International Law",
+            "Units": 24.0,
+            "SubPlanCode": "INTL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "International Policy",
+            "Units": 24.0,
+            "SubPlanCode": "INPL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "International Political Economy",
+            "Units": 24.0,
+            "SubPlanCode": "IRPE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "International Relations",
+            "Units": 48.0,
+            "SubPlanCode": "IRH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "International Relations Honours",
+            "Units": 48.0,
+            "SubPlanCode": "IRH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "International Relations of the Asia-Pacific",
+            "Units": 24.0,
+            "SubPlanCode": "IRAP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "International Security",
+            "Units": 24.0,
+            "SubPlanCode": "IRIS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "International Trade and Finance",
+            "Units": 24.0,
+            "SubPlanCode": "ITFN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "International and Comparative Law",
+            "Units": 24.0,
+            "SubPlanCode": "INTC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Italian Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "ITAL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Japanese Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "JPNS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Korean Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "KORE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Language Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "LANG-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Latin Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "LATN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Law Reform, Environmental and Social Justice",
+            "Units": 24.0,
+            "SubPlanCode": "LRES-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Leadership",
+            "Units": 24.0,
+            "SubPlanCode": "LEAD-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Literary Chinese language and culture",
+            "Units": 24.0,
+            "SubPlanCode": "LCHN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Machine Learning",
+            "Units": 24.0,
+            "SubPlanCode": "MCHL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Machine Learning",
+            "Units": 24.0,
+            "SubPlanCode": "MACL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Macroeconomic Policy",
+            "Units": 24.0,
+            "SubPlanCode": "MAEC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Management Core",
+            "Units": 24.0,
+            "SubPlanCode": "MGMC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Management Essentials",
+            "Units": 24.0,
+            "SubPlanCode": "MGME-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Management Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MGMT-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Marketing",
+            "Units": 24.0,
+            "SubPlanCode": "MKTG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Marketing Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MKTG-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Mathematical Physics",
+            "Units": 24.0,
+            "SubPlanCode": "MPHY-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Mathematics Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MATH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Medical Research Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MEDR-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Microbiology and Immunology",
+            "Units": 24.0,
+            "SubPlanCode": "MBIM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Microeconomic Policy",
+            "Units": 24.0,
+            "SubPlanCode": "MIEC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Middle Eastern and Central Asian Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MECA-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Military Operations, Leadership and Command",
+            "Units": 24.0,
+            "SubPlanCode": "MOLC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Mongolian language and culture",
+            "Units": 24.0,
+            "SubPlanCode": "MNGL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Museum Education and Heritage Interpretation",
+            "Units": 24.0,
+            "SubPlanCode": "MEHI-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Museums and Collections ",
+            "Units": 24.0,
+            "SubPlanCode": "MUCO-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Music Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MUSI-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Music Technology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MTEC-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Musicology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "MUSY-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Natural Resource Management",
+            "Units": 24.0,
+            "SubPlanCode": "NRMG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Neuroscience and Physiology",
+            "Units": 24.0,
+            "SubPlanCode": "NEUR-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "New Technologies Law",
+            "Units": 24.0,
+            "SubPlanCode": "TECH-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Optics",
+            "Units": 24.0,
+            "SubPlanCode": "OPTC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Peace and Conflict Studies",
+            "Units": 24.0,
+            "SubPlanCode": "IRPC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Performance Honours",
+            "Units": 48.0,
+            "SubPlanCode": "PERF-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Persian Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "PERS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Philosophy Honours",
+            "Units": 48.0,
+            "SubPlanCode": "PHIL-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Physics Honours",
+            "Units": 48.0,
+            "SubPlanCode": "PHYS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Physics of the Earth Honours",
+            "Units": 48.0,
+            "SubPlanCode": "POTE-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Plant Science",
+            "Units": 24.0,
+            "SubPlanCode": "PLNT-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Policy Analysis",
+            "Units": 24.0,
+            "SubPlanCode": "POAN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Policy Communication",
+            "Units": 24.0,
+            "SubPlanCode": "POCM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Political Science Honours",
+            "Units": 48.0,
+            "SubPlanCode": "POLS-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Politics and International Relations Honours",
+            "Units": 48.0,
+            "SubPlanCode": "PSIR-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Population Change",
+            "Units": 24.0,
+            "SubPlanCode": "POPC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Population Health Honours",
+            "Units": 48.0,
+            "SubPlanCode": "POPH-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Portuguese Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "PORT-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Primate and Human Behaviour",
+            "Units": 24.0,
+            "SubPlanCode": "PRHB-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Private Commercial Law",
+            "Units": 24.0,
+            "SubPlanCode": "PRCO-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Professional Computing",
+            "Units": 24.0,
+            "SubPlanCode": "PCOM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Professional Science Engagement",
+            "Units": 24.0,
+            "SubPlanCode": "PSCE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Project Management",
+            "Units": 24.0,
+            "SubPlanCode": "PROM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Project Management Essentials",
+            "Units": 24.0,
+            "SubPlanCode": "PMGE-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Psychology",
+            "Units": 24.0,
+            "SubPlanCode": "PSYC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Psychology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "PSYC-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Public Finance",
+            "Units": 24.0,
+            "SubPlanCode": "PUFN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Public Law",
+            "Units": 24.0,
+            "SubPlanCode": "PUBL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Public Law",
+            "Units": 24.0,
+            "SubPlanCode": "PULA-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Regulation: National & International Regimes",
+            "Units": 24.0,
+            "SubPlanCode": "REGL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Reporting and Governance",
+            "Units": 24.0,
+            "SubPlanCode": "REPG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Russian Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "RUSS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Sanskrit Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "SKRT-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Science Communication Honours",
+            "Units": 48.0,
+            "SubPlanCode": "SCOM-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Science Honours",
+            "Units": 48.0,
+            "SubPlanCode": "SCNC-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Security Studies Honours",
+            "Units": 48.0,
+            "SubPlanCode": "SEST-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Social Policy",
+            "Units": 24.0,
+            "SubPlanCode": "SOPL-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Social Research Methods",
+            "Units": 24.0,
+            "SubPlanCode": "SORM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Society and Environment",
+            "Units": 24.0,
+            "SubPlanCode": "SOEN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Sociology Honours",
+            "Units": 48.0,
+            "SubPlanCode": "SOCY-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Software Engineering",
+            "Units": 24.0,
+            "SubPlanCode": "SENG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Spanish Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "SPAN-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Statistics",
+            "Units": 24.0,
+            "SubPlanCode": "STAT-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Statistics Honours",
+            "Units": 48.0,
+            "SubPlanCode": "STAT-HSPC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Strategy and Operations",
+            "Units": 24.0,
+            "SubPlanCode": "STOP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Sustainability Science",
+            "Units": 24.0,
+            "SubPlanCode": "SUSC-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Systems and Architecture",
+            "Units": 24.0,
+            "SubPlanCode": "SYAR-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Tetum language and culture",
+            "Units": 24.0,
+            "SubPlanCode": "TETM-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Thai Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "THAI-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Theoretical Computer Science",
+            "Units": 24.0,
+            "SubPlanCode": "THCS-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Undergraduate"
+        },
+        {
+            "Name": "Tok Pisin Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "TOKP-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Vietnamese Language and Culture",
+            "Units": 24.0,
+            "SubPlanCode": "VIET-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "Visual Arts",
+            "Units": 24.0,
+            "SubPlanCode": "ARTV-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Visual Effects",
+            "Units": 24.0,
+            "SubPlanCode": "VIFX-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        },
+        {
+            "Name": "Water Science and Management",
+            "Units": 24.0,
+            "SubPlanCode": "WSMG-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": "Postgraduate"
+        },
+        {
+            "Name": "World Affairs",
+            "Units": 24.0,
+            "SubPlanCode": "IRWA-SPEC",
+            "SubplanType": "SPC",
+            "Year": 2020,
+            "Career": ""
+        }
+    ],
+    "Suggestion": null
+}
