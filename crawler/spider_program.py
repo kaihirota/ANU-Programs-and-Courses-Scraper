@@ -18,18 +18,20 @@ class SpiderProgram(SpiderANU):
     """This class is for scraping ANU programs - Master, Bachelor, Diploma, etc"""
     name = 'SpiderProgram'
     id_attribute_name = 'AcademicPlanCode'
-    data_files = ['data/from_api/programs_undergrad.json', 'data/from_api/programs_postgrad.json']
     html_path = '//div[has-class("body", "transition")]' \
                 '/div[@id="study"]' \
                 '/div[has-class("body__inner", "w-doublewide", "copy")]'
 
     def start_requests(self):
-        for file_path in self.data_files:
-            with open(file_path) as f:
+        path = 'data/from_api/programs/'
+        all_items = {}
+        for file in os.listdir(path):
+            with open(os.path.join(path, file)) as f:
                 data = json.load(f)
                 for item in data['Items']:
-                    url = f"https://{self.DOMAIN}/program/{item[self.id_attribute_name]}"
-                    yield scrapy.Request(url, self.parse)
+                    all_items[item[self.id_attribute_name]] = item
+        for key in sorted(all_items.keys()):
+            yield scrapy.Request(f"https://{self.DOMAIN}/program/{key}", self.parse)
 
     def parse(self, response: HtmlResponse, **kwargs):
         program_id = response.url.split('/')[-1]

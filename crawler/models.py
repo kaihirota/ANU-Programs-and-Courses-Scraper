@@ -23,7 +23,7 @@ class Course(Node):
     offered_in: List[str] = Field()
 
 
-class Specialisation(Item):
+class Specialisation(Node):
     type: str = Field()
     units: int = Field()
 

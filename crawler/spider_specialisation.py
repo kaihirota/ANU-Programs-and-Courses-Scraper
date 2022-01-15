@@ -13,14 +13,19 @@ class SpiderSpecialisation(SpiderProgram):
     id_attribute_name = 'SubPlanCode'
 
     def start_requests(self):
-        path = 'data/from_api/specialisations'
+        path = 'data/from_api/specialisations/'
+        all_items = {}
         for fn in os.listdir(path):
-            specialisation_type, _ = os.path.splitext(fn)
+            s, _ = os.path.splitext(fn)
+            specialisation_type, _ = s.split('_')
             with open(os.path.join(path, fn)) as f:
                 data = json.load(f)
                 for item in data['Items']:
-                    url = f"https://{self.DOMAIN}/{specialisation_type}/{item[self.id_attribute_name]}"
-                    yield scrapy.Request(url, self.parse)
+                    all_items[item[self.id_attribute_name]] = specialisation_type
+        for key in sorted(all_items.keys()):
+            specialisation_type = all_items[key]
+            url = f"https://{self.DOMAIN}/{specialisation_type}/{key}"
+            yield scrapy.Request(url, self.parse)
 
     def parse(self, response: HtmlResponse, **kwargs):
         if "Error" in response.url:

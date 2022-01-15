@@ -1,4 +1,5 @@
 import json
+import os
 import re
 
 from bs4 import BeautifulSoup
@@ -19,16 +20,16 @@ class SpiderClass(SpiderANU):
     id_attribute_name = 'CourseCode'
 
     def start_requests(self):
-        classes = {}
-        with open(f'data/from_api/classes.json') as f:
-            data = json.load(f)
-            items = data['Items']
-
-            for item in items:
-                if item[self.id_attribute_name] not in classes:
-                    url = f"https://{self.DOMAIN}/course/{item[self.id_attribute_name]}"
-                    yield scrapy.Request(url, self.parse_class)
-                    classes[item[self.id_attribute_name]] = item
+        all_items = {}
+        path = 'data/from_api'
+        for file in os.listdir(path):
+            if file.endswith('json'):
+                with open(os.path.join(path, file)) as f:
+                    data = json.load(f)
+                    for item in data['Items']:
+                        all_items[item[self.id_attribute_name]] = item
+        for key in sorted(all_items.keys()):
+            yield scrapy.Request(f"https://{self.DOMAIN}/course/{key}", self.parse_class)
 
     def parse(self, response: HtmlResponse, **kwargs) -> Course:
         return self.parse_class(response)
@@ -122,7 +123,7 @@ class SpiderClass(SpiderANU):
             requisites_txt = re.sub('\s+', ' ', requisites_txt)
 
             doc = self.nlp(requisites_txt)
-            course['requisites_raw'] = doc.text
+            course['prerequisites_raw'] = doc.text
 
             requisites = parse_requisites(doc)
             if len(requisites) > 1:
