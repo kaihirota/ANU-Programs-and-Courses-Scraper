@@ -139,7 +139,8 @@ def create_nodes_and_edges_if_class_requisite(
 
 def create_requirement_node(doc: Dict, parent_node: Node, G: Graph) -> Relationship:
     req_node = Node("Requirement")
-    doc['id'] = get_id_from_string(doc['description'].encode('utf-8'))
+    # doc['id'] = get_id_from_string(doc['description'].encode('utf-8'))
+    doc['id'] = str(id(doc))
     req_node = update_node(req_node, doc)
     G.create(req_node)
 
